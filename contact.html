@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Déclaration du type de document HTML et de la langue (français) -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Déclaration du codage des caractères pour garantir l'affichage correct des caractères spéciaux -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Déclaration pour une bonne mise en page sur les appareils mobiles en utilisant le viewport -->
+
+    <title>Contact - Digital +</title>
+    <!-- Titre de la page qui sera affiché dans l'onglet du navigateur -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien vers la feuille de style principale (styles.css) pour styliser la page -->
+
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers Font Awesome pour ajouter des icônes (utilisées dans les boutons et liens) -->
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lien vers Google Fonts pour importer la police "Inter" dans plusieurs poids (300 à 700) -->
+</head>
+
+<body>
+    <!-- En-tête de la page -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Menu mobile -->
+<div class="mobile-menu">
+    <div class="container">
+        <!-- Formulaire de recherche mobile -->
+        <form action="#" class="mobile-search">
+            <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+            <button type="submit" class="mobile-search-button">
+                <i class="fas fa-search"></i> <!-- Icône de recherche -->
+            </button>
+        </form>
+        <!-- Liens de navigation mobile -->
+        <ul class="mobile-nav-links">
+            <!-- Liste des liens avec des icônes Font Awesome -->
+            <li><a href="industrie.html"><i class="fas fa-industry"></i> Industrie</a></li>
+            <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+            <li><a href="carriere.html"><i class="fas fa-users"></i> Carrière</a></li>
+            <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li><a href="contact.html" class="active"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Contenu principal -->
+<main>
+    <!-- Bannière hero -->
+    <section class="page-hero contact-hero">
+        <div class="hero-overlay"></div> <!-- Superposition pour effet visuel -->
+        <div class="container">
+            <div class="hero-content animate-fade-in"> <!-- Animation de fondu -->
+                <h1>Contactez-nous</h1> <!-- Titre de la section -->
+                <p>Notre équipe est à votre disposition pour répondre à toutes vos questions</p> <!-- Description -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Informations de contact et formulaire -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-container">
+                <!-- Informations de contact -->
+                <div class="contact-info-card animate-on-scroll"> <!-- Animation sur défilement -->
+                    <h2>Nos coordonnées</h2> <!-- Titre des coordonnées -->
+                    <div class="contact-info-item"> <!-- Première information de contact (adresse) -->
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i> <!-- Icône de localisation -->
+                        </div>
+                        <div class="contact-text">
+                            <h3>Adresse</h3>
+                            <p>123 Avenue de l'Innovation<br>75001 Paris, France</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i> <!-- Icône de téléphone -->
+                        </div>
+                        <div class="contact-text">
+                            <h3>Téléphone</h3>
+                            <p>+212 1 23 45 67 89</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i> <!-- Icône d'email -->
+                        </div>
+                        <div class="contact-text">
+                            <h3>Email</h3>
+                            <p>Digital +@gmail.com</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i> <!-- Icône d'horaires -->
+                        </div>
+                        <div class="contact-text">
+                            <h3>Horaires d'ouverture</h3>
+                            <p>Lundi - Vendredi: 9h00 - 18h00<br>Samedi - Dimanche: Fermé</p>
+                        </div>
+                    </div>
+
+                    <!-- Icônes des réseaux sociaux -->
+                    <div class="contact-social">
+                        <h3>Suivez-nous</h3>
+                        <div class="social-icons">
+                            <!-- Liens vers les réseaux sociaux -->
+                            <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Formulaire de contact -->
+                <div class="contact-form-container animate-on-scroll" data-delay="200">
+                    <h2>Envoyez-nous un message</h2>
+                    <form class="contact-form" id="contactForm"> <!-- Formulaire de contact -->
+                        <!-- Champ pour le nom -->
+                        <div class="form-group">
+                            <label for="name">Nom complet</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom" required>
+                        </div>
+
+                        <!-- Champ pour l'email -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Votre email" required>
+                        </div>
+
+                        <!-- Champ pour le téléphone -->
+                        <div class="form-group">
+                            <label for="phone">Téléphone</label>
+                            <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone">
+                        </div>
+
+                        <!-- Sélection du sujet -->
+                        <div class="form-group">
+                            <label for="subject">Sujet</label>
+                            <select id="subject" name="subject" required>
+                                <option value="" disabled selected>Sélectionnez un sujet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="partenariat">Proposition de partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+
+                        <!-- Champ pour le message -->
+                        <div class="form-group full-width">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Votre message"
+                                required></textarea>
+                        </div>
+
+                        <!-- Case à cocher pour accepter la politique de confidentialité -->
+                        <div class="form-group full-width">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="privacy" name="privacy" required>
+                                <label for="privacy">J'accepte que mes données soient traitées conformément à la
+                                    politique de confidentialité</label>
+                            </div>
+                        </div>
+
+                        <!-- Bouton de soumission -->
+                        <div class="form-group full-width">
+                            <button type="submit" class="btn btn-primary submit-btn">
+                                Envoyer le message
+                                <i class="fas fa-paper-plane"></i> <!-- Icône d'envoi -->
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Nous trouver</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="map-container animate-on-scroll">
+                <!-- Carte Google Maps intégrée -->
+                <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="450" style="border:0;"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+<!-- Section FAQ -->
+<!-- Cette section contient les questions fréquentes (FAQ) et leurs réponses -->
+<section class="faq-section">
+    <div class="container">
+        <!-- En-tête de la section FAQ avec une animation d'apparition -->
+        <div class="section-header animate-on-scroll">
+            <h2>Questions fréquentes</h2> <!-- Titre de la section -->
+            <div class="section-divider"></div> <!-- Ligne de séparation sous le titre -->
+        </div>
+
+        <!-- Conteneur des questions et réponses -->
+        <div class="faq-container">
+            <!-- Première question de la FAQ -->
+            <div class="faq-item animate-on-scroll" data-delay="0">
+                <div class="faq-question">
+                    <h3>Quel est le délai de réponse après l'envoi d'un message ?</h3> <!-- Question posée -->
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    <!-- Icône pour ouvrir/fermer la réponse -->
+                </div>
+                <div class="faq-answer">
+                    <p>Nous nous engageons à répondre à toutes les demandes dans un délai de 24 à 48 heures ouvrables.
+                        Pour les demandes urgentes, nous vous recommandons de nous contacter par téléphone.</p>
+                    <!-- Réponse à la question -->
+                </div>
+            </div>
+
+            <!-- Deuxième question de la FAQ -->
+            <div class="faq-item animate-on-scroll" data-delay="200">
+                <div class="faq-question">
+                    <h3>Comment obtenir un devis pour vos services ?</h3> <!-- Question posée -->
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    <!-- Icône pour ouvrir/fermer la réponse -->
+                </div>
+                <div class="faq-answer">
+                    <p>Vous pouvez demander un devis en remplissant notre formulaire de contact en sélectionnant
+                        "Demande de devis" comme sujet. Un de nos conseillers vous contactera pour discuter de vos
+                        besoins spécifiques et vous proposer une offre personnalisée.</p> <!-- Réponse à la question -->
+                </div>
+            </div>
+
+            <!-- Troisième question de la FAQ -->
+            <div class="faq-item animate-on-scroll" data-delay="400">
+                <div class="faq-question">
+                    <h3>Proposez-vous des services à l'international ?</h3> <!-- Question posée -->
+                    <span class="faq-toggle"><i class="fas fa-plus"></i></span>
+                    <!-- Icône pour ouvrir/fermer la réponse -->
+                </div>
+                <div class="faq-answer">
+                    <p>Oui, nous intervenons dans toute l'Europe et aux États-Unis. Nous disposons d'équipes locales
+                        dans plusieurs pays pour assurer un service de proximité et une compréhension des spécificités
+                        régionales.</p> <!-- Réponse à la question -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="footer">
+    <div class="container">
+        <!-- Contenu principal du pied de page -->
+        <div class="footer-content">
+            <!-- Section 1 : Présentation de l'entreprise -->
+            <div class="footer-section">
+                <h3>Digital +</h3> <!-- Nom de l'entreprise -->
+                <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.</p>
+                <!-- Description de l'entreprise -->
+                <div class="social-links">
+                    <!-- Icônes des réseaux sociaux -->
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 2 : Liens rapides vers différentes pages -->
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <!-- Liste des liens vers d'autres pages du site -->
+                    <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                    <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                    <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                    <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                    <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                    <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3 : Informations de contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <!-- Détails de contact de l'entreprise -->
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation<br>75001 Paris, France</span> <!-- Adresse de l'entreprise -->
+                    </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <span>+212 6 00 00 00 00</span>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>Digitalplus@gmail.com</span>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Section 4 : Formulaire de la newsletter -->
+            <div class="footer-section">
+                <h3>Newsletter</h3> <!-- Titre de la section -->
+                <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                <!-- Message d'incitation à l'inscription -->
+                <form class="newsletter-form">
+                    <!-- Formulaire pour s'abonner à la newsletter -->
+                    <input type="email" placeholder="Votre email" class="newsletter-input">
+                    <button type="submit" class="newsletter-button">S'inscrire</button>
+                    <!-- Bouton pour soumettre l'email -->
+                </form>
+            </div>
+        </div>
+
+        <!-- Section de bas de page -->
+        <div class="footer-bottom">
+            <p>© Digital + 2025. Tous droits réservés.</p> <!-- Copyright -->
+            <ul class="footer-bottom-links">
+                <!-- Liens vers des pages importantes -->
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Conditions</a></li>
+                <li><a href="#">Plan du site</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Lien vers le fichier JavaScript -->
+<script src="script.js"></script> <!-- Ce fichier contient probablement des interactions avec la page -->
+</body>
+
+</html>

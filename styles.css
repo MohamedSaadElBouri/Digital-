@@ -1,0 +1,3516 @@
+/* Varibale GLobal marquent les couleurs principal du site */
+/* Le sélecteur :root définit les variables CSS globales accessibles partout dans le document */
+:root {
+  --primary-color: #0056b3;
+  --primary-dark: #004494;
+  --primary-light: #e6f0ff;
+  --secondary-color: #2c3e50;
+  --accent-color: #f39c12;
+  --success-color: #27ae60;
+  --info-color: #3498db;
+  --warning-color: #e67e22;
+  --danger-color: #e74c3c;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  /* Varibales pour les Transitions */
+  --transition-fast: 0.3s;
+  --transition-medium: 0.5s;
+  --transition-slow: 0.8s;
+  /* Variables pour les bordures */
+  --border-radius-sm: 0.25rem;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+  /* Variables pour l'ombre  */
+  /* box shodow: x y blur couleur */
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+  --box-shadow-sm: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+  --box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+}
+
+/* Definir un style global */
+/* Le sélecteur universel * cible tous les éléments du document */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* Box-sizing:border-box, pour inclius le paddign et la bordure au width */
+}
+
+/* scroll-behavior:smooth pour ajouter un defilement fluide lors ,sans cette propriété le lien saute directement au section */
+/* Le sélecteur html cible l'élément racine du document */
+html {
+  scroll-behavior: smooth;
+  /* Propriété avancée pour le défilement fluide */
+  font-size: 16px;
+}
+
+/* Sélecteur pour le corps du document */
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  color: var(--gray-800);
+  /* Utilisation d'une variable CSS */
+  background-color: var(--light-color);
+  overflow-x: hidden;
+  /* Propriété avancée pour masquer le défilement horizontal */
+}
+
+/* Sélecteur groupé pour tous les éléments d'en-tête */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+/* Sélecteurs spécifiques pour chaque niveau d'en-tête */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+/* Marge general pour tous les paragraphes */
+p {
+  margin-bottom: 1rem;
+}
+
+/* Definir un style general des liens */
+/* Sélecteur pour tous les liens */
+a {
+  color: var(--primary-color);
+  /* Pour eviter le "underline sur les texte */
+  text-decoration: none;
+  /* transition : prpriété,durée */
+  transition: color var(--transition-fast);
+  /* Propriété avancée pour les animations */
+}
+
+/* Sélecteur pseudo-classe :hover pour l'état survol des liens */
+a:hover {
+  color: var(--primary-dark);
+
+}
+
+/* Sélecteur pour toutes les listes non ordonnées */
+ul {
+  /* Aucune personalisation pour tous les puce */
+  list-style: none;
+}
+
+/* Sélecteur pour toutes les images */
+img {
+  /* Définir une largeur maximal pour tous les images */
+  max-width: 100%;
+  height: auto;
+}
+
+/* Style general pour la sectin "header */
+/* Sélecteur de classe pour les conteneurs */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  /* Centrage horizontal avancé */
+  padding: 0 1rem;
+}
+
+/* Définit un style global pour tous les titres des sections (Notre domaine clé, employé de mois...) */
+/* Sélecteur de classe pour les en-têtes de section */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* Style pour le underline des titres de sections  */
+/* Sélecteur de classe pour les séparateurs de section */
+.section-divider {
+  width: 80px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: 1rem auto;
+  /* Centrage horizontal avancé */
+  border-radius: var(--border-radius);
+}
+
+/* .section-divider.light {
+  background-color: var(--light-color);
+} */
+
+/* Deinir un style général des BOUTTONS */
+/* Sélecteur de classe pour les boutons */
+.btn {
+  display: inline-flex;
+  /* Propriété avancée de disposition */
+  /* Controler les bouttons au centre selon l'axe des x */
+  align-items: center;
+  /* Propriété avancée de Flexbox */
+  /* Controler les bouttons au centre selon l'axe des y */
+  justify-content: center;
+  /* Propriété avancée de Flexbox */
+  padding: 0.75rem 1.5rem;
+  font-weight: 600;
+  text-align: center;
+  border: none;
+  border-radius: var(--border-radius);
+  /* Changer la forme du curseur */
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  /* Propriété avancée pour les animations */
+  text-decoration: none;
+}
+
+/* Style des icons à l'nterieur des bouttons */
+/* Sélecteur descendant pour les icônes dans les boutons */
+.btn i,
+.btn svg {
+  margin-left: 0.5rem;
+}
+
+/* Style pour des boutons dans le main content de la page  */
+/* Sélecteur de classe pour les boutons primaires */
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* Sélecteur pseudo-classe :hover pour l'état survol des boutons primaires */
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-3px);
+  /* Propriété avancée de transformation */
+  box-shadow: var(--box-shadow);
+}
+
+/* Style d'autres bouttons */
+/* Sélecteur de classe pour les boutons avec contour */
+.btn-outline {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+/* Sélecteur pseudo-classe :hover pour l'état survol des boutons avec contour */
+.btn-outline:hover {
+  background-color: white;
+  color: var(--primary-color);
+  /* Création d'un effet d'élévation en haut */
+  transform: translateY(-3px);
+  /* Propriété avancée de transformation */
+  box-shadow: var(--box-shadow);
+}
+
+/* ===== HEADER & NAVIGATION ===== */
+
+/* Sélecteur de classe pour l'en-tête du site */
+.header {
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  /* Propriété avancée pour fixer l'élément lors du défilement */
+  top: 0;
+  z-index: 1000;
+  /* Propriété avancée pour contrôler l'empilement des éléments */
+  /* z-index determine l'emplacement de element au dessus ou au dessous */
+  transition: all var(--transition-fast);
+  /* Animation lors des changements d'état */
+}
+
+/* Sélecteur combiné pour l'état défilé de l'en-tête (commenté) */
+/* .header.scrolled {
+  padding: 0.5rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+} */
+
+/* Sélecteur de classe pour la barre de navigation */
+.nav {
+  /* Par defaut l'affichage va etre selon l'axe des abscices */
+  display: flex;
+  /* Propriété avancée de mise en page flexbox */
+  align-items: center;
+  /* Propriété d'alignement vertical flexbox */
+  justify-content: space-between;
+  /* Propriété d'alignement horizontal flexbox */
+  padding: 1rem 1rem;
+}
+
+/* Sélecteur de classe pour le logo */
+/* Correction pour le logo */
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70px;
+  margin-right: 25px;
+  width: 200px;
+  overflow: visible;
+  /* margin-top: 5px; */
+}
+
+.logo img {
+  height: auto;
+  max-height: 100px; /* Augmenté pour agrandir encore plus l'image */
+  width: auto;
+  object-fit: contain;
+  transform: scale(2.1); /* Zoom par défaut augmenté davantage */
+  transform-origin: center center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.logo img:hover {
+  transform: scale(2); /* Zoom supplémentaire au survol augmenté */
+}
+
+/* Style pour les liens des .html */
+/* Sélecteur de classe pour les liens de navigation */
+.nav-link {
+  display: flex;
+  /* Utilisation de flexbox pour aligner les icônes et le texte */
+  align-items: center;
+  padding: 0.2rem 0.15rem;
+  color: var(--gray-700);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  /* Animation de tous les changements */
+  position: relative;
+  /* Position relative pour le positionnement de l'underline */
+  white-space: nowrap;
+  /* Propriété avancée pour éviter le retour à la ligne */
+  /* Maintient le texte sur une seule ligne */
+}
+
+/* Sélecteur de classe pour le conteneur des liens de navigation */
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  /* Propriété avancée pour l'espacement entre éléments flexbox */
+  /* Ajouter l'espacement entre les éléments de navigation */
+}
+
+/* Les icons des page .html */
+/* Sélecteur descendant pour les icônes dans les liens de navigation */
+.nav-link i,
+.nav-link svg {
+  margin-right: 0.5rem;
+  font-size: 1rem;
+}
+
+/* Sélecteurs combinés pour les états survol et actif des liens */
+.nav-link:hover,
+.nav-link.active {
+  color: var(--primary-color);
+}
+
+/* Ajouter de styles après chaque lien (underline dans ce cas) */
+/* Pseudo-élément ::after pour créer l'effet d'underline */
+.nav-link::after {
+  content: "";
+  /* Propriété requise pour les pseudo-éléments */
+  position: absolute;
+  /* Positionnement absolu par rapport au parent */
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  /* Largeur initiale à 0 pour l'animation */
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: all var(--transition-fast);
+  /* Animation de la barre */
+  transform: translateX(-50%);
+  /* Centrage horizontal avancé */
+}
+
+/* Sélecteurs combinés pour l'effet d'underline au survol et à l'état actif */
+.nav-link:hover::after,
+.nav-link.active::after {
+  /* Underline autour du lien */
+  width: 100%;
+  /* Élargissement de la barre lors du survol */
+}
+
+/* Sélecteur de classe pour le sélecteur de langue */
+.language-toggle {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  color: var(--gray-700);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+  position: relative;
+  /* Position relative pour le menu déroulant */
+  cursor: pointer;
+}
+
+/* Sélecteur descendant pour le texte dans le sélecteur de langue */
+.language-toggle span {
+  font-weight: 700;
+  margin-right: 0.25rem;
+}
+
+/* Sélecteur descendant pour l'icône dans le sélecteur de langue */
+.language-toggle i {
+  margin-left: 0.25rem;
+  font-size: 0.75rem;
+}
+
+/* Pseudo-classe :hover pour l'effet de survol du sélecteur de langue */
+.language-toggle:hover {
+  color: var(--primary-color);
+}
+
+/* Ajouter ce nouveau style pour le menu déroulant des langues */
+/* Sélecteur de classe pour le menu déroulant des langues */
+.language-dropdown {
+  position: absolute;
+  /* Positionnement absolu par rapport au parent */
+  top: 100%;
+  right: 0;
+  background-color: white;
+  border-radius: var(--border-radius);
+  box-shadow: var(--box-shadow-sm);
+  padding: 0.5rem 0;
+  min-width: 120px;
+  z-index: 1000;
+  /* Contrôle de l'empilement (au-dessus des autres éléments) */
+  display: none;
+  /* Caché par défaut */
+}
+
+/* Sélecteur combiné pour l'état affiché du menu déroulant */
+.language-dropdown.show {
+  display: block;
+  animation: fadeIn 0.5s ease-out;
+  /* Animation avancée à l'apparition */
+}
+
+/* Menu de langue */
+/* Sélecteur descendant pour les liens dans le menu déroulant */
+.language-dropdown a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--gray-700);
+}
+
+/* Pseudo-classe :hover pour l'effet de survol des liens du menu */
+.language-dropdown a:hover {
+  background-color: var(--gray-100);
+  color: var(--primary-color);
+}
+
+/* Sélecteur combiné pour l'état actif des liens du menu */
+.language-dropdown a.active {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Barre de recharche */
+/* Sélecteur de classe pour le conteneur de recherche */
+.search-container {
+  position: relative;
+  /* Position relative pour le positionnement du bouton */
+  margin-right: 1rem;
+  margin-left: 2rem;
+}
+
+/* Sélecteur de classe pour le formulaire de recherche */
+.search-form {
+  display: flex;
+  align-items: center;
+}
+
+/* Sélecteur de classe pour le champ de recherche */
+.search-input {
+  padding: 0.5rem 2.5rem 0.5rem 1rem;
+  /* Padding asymétrique pour l'icône */
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+  transition: all var(--transition-fast);
+  /* Animation de la largeur */
+  width: 200px;
+}
+
+/* Pseudo-classe :focus pour l'état de focus du champ de recherche */
+.search-input:focus {
+  outline: none;
+  /* Suppression de l'outline par défaut */
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+  /* Effet de focus personnalisé */
+  width: 250px;
+  /* Élargissement du champ au focus */
+}
+
+/* Sélecteur de classe pour le bouton de recherche */
+.search-button {
+  position: absolute;
+  /* Positionnement absolu par rapport au parent */
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Centrage vertical avancé */
+  background: none;
+  border: none;
+  color: var(--gray-500);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+/* Pseudo-classe :hover pour l'effet au survol du bouton de recherche */
+.search-button:hover {
+  color: var(--primary-color);
+}
+
+/* Pour le menu en mobile  */
+/* Sélecteur de classe pour le bouton de menu mobile */
+.menu-toggle {
+  display: none;
+  /* Caché par défaut sur desktop */
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--gray-700);
+  transition: color var(--transition-fast);
+  /* Animation du changement de couleur */
+}
+
+/* Pseudo-classe :hover pour l'effet au survol du bouton menu */
+.menu-toggle:hover {
+  color: var(--primary-color);
+}
+
+/* Sélecteur de classe pour le conteneur du menu mobile */
+.mobile-menu {
+  display: none;
+  /* Caché par défaut */
+  background-color: white;
+  border-top: 1px solid var(--gray-200);
+  padding: 1rem 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  /* Ombre portée avancée */
+}
+
+/* Sélecteur de classe pour la barre de recherche mobile */
+.mobile-search {
+  display: flex;
+  margin-bottom: 1rem;
+  position: relative;
+  /* Position relative pour le bouton de recherche */
+}
+
+/* Sélecteur de classe pour le champ de recherche mobile */
+.mobile-search-input {
+  width: 100%;
+  /* Prend toute la largeur disponible */
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  /* Padding asymétrique pour l'icône */
+  border: 1px solid var(--gray-300);
+  border-radius: var(--border-radius);
+}
+
+/* Sélecteur de classe pour le bouton de recherche mobile */
+.mobile-search-button {
+  position: absolute;
+  /* Positionnement absolu par rapport au parent */
+  right: 0.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  /* Centrage vertical avancé */
+  background: none;
+  border: none;
+  color: var(--gray-500);
+  cursor: pointer;
+}
+
+/* Sélecteur de classe pour les liens de navigation mobile */
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  /* Disposition verticale avec flexbox */
+}
+
+/* Sélecteur descendant pour les éléments de liste dans la navigation mobile */
+.mobile-nav-links li {
+  margin-bottom: 0.5rem;
+}
+
+/* Sélecteur descendant pour les liens dans la navigation mobile */
+.mobile-nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 0;
+  color: var(--gray-700);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+/* Sélecteur descendant pour les icônes dans les liens de navigation mobile */
+.mobile-nav-links a i,
+.mobile-nav-links a svg {
+  margin-right: 0.75rem;
+}
+
+/* Sélecteurs combinés pour les états survol et actif des liens mobiles */
+.mobile-nav-links a:hover,
+.mobile-nav-links a.active {
+  color: var(--primary-color);
+}
+
+/* ===== HERO SECTION ===== */
+/* Sélecteurs groupés pour les sections héro principales et secondaires */
+.hero,
+.page-hero {
+  position: relative;
+  /* Position relative pour le positionnement de l'overlay */
+  background-color: var(--primary-color);
+  color: white;
+  padding: 5rem 0;
+  overflow: hidden;
+  /* Propriété avancée pour masquer les débordements */
+}
+
+/* Sélecteur de classe pour la section héro principale */
+.hero {
+  background-image: url("/images/hero-bg.jpg");
+  /* Image d'arrière-plan */
+  background-size: cover;
+  /* Propriété avancée pour couvrir tout l'espace disponible */
+  background-position: center;
+  /* Centrage de l'image d'arrière-plan */
+  padding: 8rem 0;
+}
+
+/* Sélecteur de classe pour les sections héro de page */
+.page-hero {
+  padding: 5rem 0;
+}
+
+/* Sélecteur de classe pour la section héro de la page industrie */
+.industrie-hero {
+  background-image: url("/images/industrie-hero.jpg");
+}
+
+/* Sélecteur de classe pour la section héro de la page contact */
+.contact-hero {
+  background-image: url("/images/contact-hero.jpg");
+}
+
+/* Sélecteur de classe pour l'overlay du héro */
+.hero-overlay {
+  position: absolute;
+  /* Positionnement absolu pour couvrir toute la section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 86, 179, 0.9) 0%, rgba(0, 31, 63, 0.8) 100%);
+  /* Dégradé avancé avec transparence */
+}
+
+/* Sélecteur de classe pour le contenu du héro */
+.hero-content {
+  position: relative;
+  /* Position relative pour le z-index */
+  z-index: 1;
+  /* Positionne le contenu au-dessus de l'overlay */
+  max-width: 800px;
+}
+
+/* Sélecteur descendant pour le titre du héro */
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Sélecteur descendant pour le paragraphe du héro */
+.hero-content p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  /* Propriété avancée pour la transparence */
+}
+
+/* Sélecteur de classe pour le conteneur des boutons du héro */
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  /* Propriété avancée pour l'adaptabilité responsive */
+  gap: 1rem;
+  /* Espacement moderne entre les boutons */
+}
+/* ===== DOMAINS SECTION ===== */
+/* Sélecteur de classe pour la section des domaines */
+.domains {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+/* Sélecteur de classe pour le conteneur des cartes utilisant Grid */
+.cards-container {
+  display: grid;
+  /* Mise en page avec CSS Grid */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Propriété avancée pour une grille responsive automatique */
+  gap: 2rem;
+  /* Espacement uniforme entre les éléments de la grille */
+}
+
+/* Sélecteur de classe pour chaque carte */
+.card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  /* Masque tout contenu qui déborde des limites de la carte */
+  box-shadow: var(--box-shadow-sm);
+  transition: all var(--transition-fast);
+  /* Animation pour tous les changements */
+  height: 100%;
+  /* Assure que toutes les cartes ont la même hauteur */
+}
+
+/* Pseudo-classe :hover pour l'effet de survol de la carte */
+.card:hover {
+  transform: translateY(-10px);
+  /* Déplacement vertical vers le haut au survol */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée au survol */
+}
+
+/* Sélecteur de classe pour le lien englobant la carte */
+.card-link {
+  display: block;
+  color: inherit;
+  /* Hérite la couleur du parent */
+  height: 100%;
+  /* Occupe toute la hauteur de la carte */
+}
+
+/* Sélecteur de classe pour le conteneur de l'image de la carte */
+.card-image-container {
+  position: relative;
+  /* Position relative pour l'overlay */
+  overflow: hidden;
+  /* Masque l'effet de zoom qui déborde */
+  height: 200px;
+}
+
+/* Sélecteur de classe pour l'image de la carte */
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Propriété avancée pour ajuster l'image sans déformation */
+  transition: transform var(--transition-medium);
+  /* Animation de l'effet de zoom */
+}
+
+/* Sélecteur descendant combiné pour l'image au survol de la carte */
+.card:hover .card-image {
+  transform: scale(1.1);
+  /* Effet de zoom au survol */
+}
+
+/* Sélecteur de classe pour l'overlay de la carte */
+.card-overlay {
+  position: absolute;
+  /* Positionnement absolu par rapport au conteneur */
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  /* Dégradé vertical avec transparence */
+  color: white;
+  opacity: 0;
+  /* Invisible par défaut */
+  transform: translateY(20px);
+  /* Positionné hors de vue initialement */
+  transition: all var(--transition-fast);
+  /* Animation d'apparition */
+}
+
+/* Sélecteur descendant combiné pour l'overlay au survol de la carte */
+.card:hover .card-overlay {
+  opacity: 1;
+  /* Devient visible au survol */
+  transform: translateY(0);
+  /* Revient à sa position normale */
+}
+
+/* Sélecteur de classe pour le contenu de la carte */
+.card-content {
+  padding: 1.5rem;
+}
+
+/* Sélecteur descendant pour le titre dans le contenu de la carte */
+.card-content h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  transition: color var(--transition-fast);
+  /* Animation de la couleur du titre */
+}
+
+/* Sélecteur descendant pour les icônes dans le titre */
+.card-content h3 i,
+.card-content h3 svg {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Sélecteur descendant combiné pour le titre au survol de la carte */
+.card:hover .card-content h3 {
+  color: var(--primary-color);
+  /* Changement de couleur au survol */
+}
+
+/* Sélecteur descendant pour le paragraphe dans le contenu de la carte */
+.card-content p {
+  color: var(--gray-600);
+  margin-bottom: 1.5rem;
+}
+
+/* Sélecteur de classe pour le pied de la carte */
+.card-footer {
+  display: flex;
+  justify-content: flex-end;
+  /* Aligne le contenu à droite */
+}
+
+/* Sélecteur de classe pour le lien "Lire plus" */
+.read-more {
+  display: flex;
+  align-items: center;
+  color: var(--primary-color);
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+/* Sélecteur descendant pour les icônes dans le lien "Lire plus" */
+.read-more i,
+.read-more svg {
+  margin-left: 0.5rem;
+  transition: transform var(--transition-fast);
+  /* Animation du déplacement de l'icône */
+}
+
+/* Sélecteur descendant combiné pour le lien "Lire plus" au survol de la carte */
+.card:hover .read-more {
+  color: var(--primary-dark);
+  /* Changement de couleur au survol */
+}
+
+/* Sélecteur descendant combiné pour les icônes au survol de la carte */
+.card:hover .read-more i,
+.card:hover .read-more svg {
+  transform: translateX(5px);
+  /* Déplacement de l'icône vers la droite */
+}
+
+/* ===== CERTIFICATIONS SECTION ===== */
+/* Sélecteur de classe pour la section des certifications */
+.certifications {
+  padding: 5rem 0;
+  background-color: var(--gray-100);
+}
+
+/* Sélecteur de classe pour la carte des certifications */
+.certifications-card {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow-sm);
+  max-width: 800px;
+  margin: 0 auto;
+  /* Centrage horizontal */
+}
+
+/* Sélecteur descendant pour le titre de la carte des certifications */
+.certifications-card h3 {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+}
+
+/* Sélecteur descendant pour les icônes dans le titre */
+.certifications-card h3 i,
+.certifications-card h3 svg {
+  margin-right: 0.75rem;
+  color: var(--primary-color);
+}
+
+/* Sélecteur de classe pour la liste des certifications */
+.certifications-list {
+  display: flex;
+  flex-direction: column;
+  /* Disposition verticale des éléments */
+  gap: 1.5rem;
+  /* Espacement uniforme entre les éléments */
+}
+
+/* Sélecteur de classe pour chaque élément de certification */
+.certification-item {
+  display: flex;
+  align-items: flex-start;
+  transition: transform var(--transition-fast);
+  /* Animation du déplacement */
+}
+
+/* Pseudo-classe :hover pour l'effet de survol de l'élément de certification */
+.certification-item:hover {
+  transform: translateX(10px);
+  /* Déplacement horizontal vers la droite */
+}
+
+/* Sélecteur de classe pour l'icône de certification */
+.certification-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* Forme circulaire */
+  margin-right: 1rem;
+  flex-shrink: 0;
+  /* Empêche l'icône de rétrécir */
+}
+
+/* Sélecteur combiné pour la variante bleue de l'icône */
+.certification-icon.blue {
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+}
+
+/* Sélecteur combiné pour la variante verte de l'icône */
+.certification-icon.green {
+  background-color: rgba(39, 174, 96, 0.1);
+  /* Couleur semi-transparente */
+  color: var(--success-color);
+}
+
+/* Sélecteur combiné pour la variante violette de l'icône */
+.certification-icon.purple {
+  background-color: rgba(155, 89, 182, 0.1);
+  /* Couleur semi-transparente */
+  color: #9b59b6;
+}
+
+/* Sélecteur descendant pour le titre dans le contenu de certification */
+.certification-content h4 {
+  margin-bottom: 0.5rem;
+}
+
+/* Sélecteur descendant pour le paragraphe dans le contenu de certification */
+.certification-content p {
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+/* ===== EMPLOYEE SECTION ===== */
+/* Sélecteur de classe pour la section employé */
+.employee {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+/* Sélecteur de classe pour la carte de l'employé */
+.employee-card {
+  display: flex;
+  flex-direction: column;
+  /* Disposition verticale des éléments */
+  align-items: center;
+  /* Centrage horizontal des éléments */
+  max-width: 800px;
+  margin: 0 auto;
+  /* Centrage horizontal de la carte */
+  background-color: white;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+  transition: all var(--transition-fast);
+  /* Animation pour tous les changements */
+}
+
+/* Pseudo-classe :hover pour l'effet de survol de la carte employé */
+.employee-card:hover {
+  transform: translateY(-10px);
+  /* Déplacement vertical vers le haut */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée au survol */
+}
+
+/* Sélecteur de classe pour le conteneur de l'image de l'employé */
+.employee-image-container {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  /* Supprimé le margin-top négatif qui causait des problèmes */
+  margin: 2rem auto 1rem;
+  /* Marge automatique pour le centrage horizontal */
+}
+
+/* Sélecteur de classe pour l'image de l'employé */
+.employee-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Propriété avancée pour ajuster l'image sans déformation */
+  border-radius: 50%;
+  /* Forme circulaire */
+  border: 5px solid white;
+  /* Bordure blanche épaisse */
+  box-shadow: var(--box-shadow-sm);
+  transition: transform var(--transition-fast);
+  /* Animation de l'effet de zoom */
+}
+
+/* Sélecteur descendant combiné pour l'image au survol de la carte employé */
+.employee-card:hover .employee-image {
+  transform: scale(1.05);
+  /* Effet de zoom au survol */
+}
+/* Style du badge d'employé - positionné absolument en bas et centré horizontalement */
+.employee-badge {
+  position: absolute;
+  /* Positionnement absolu par rapport à son conteneur */
+  bottom: -10px;
+  /* Placement 10px en dessous du bas du conteneur */
+  left: 50%;
+  /* Placement à 50% de la largeur du conteneur */
+  transform: translateX(-50%);
+  /* Décalage vers la gauche de 50% de sa propre largeur pour un centrage parfait */
+  background-color: var(--primary-color);
+  /* Utilise la couleur primaire définie en variable */
+  color: white;
+  /* Texte en blanc */
+  padding: 0.25rem 0.75rem;
+  /* Rembourrage vertical et horizontal */
+  border-radius: var(--border-radius);
+  /* Coins arrondis selon la variable définie */
+  font-size: 0.75rem;
+  /* Taille de police réduite */
+  font-weight: 600;
+  /* Police semi-grasse */
+  white-space: nowrap;
+  /* Empêche le texte de passer à la ligne */
+}
+
+/* Style du contenu de la carte employé - centré avec espacement interne */
+.employee-content {
+  text-align: center;
+  /* Texte centré horizontalement */
+  padding: 1.5rem;
+  /* Rembourrage de 1.5rem sur tous les côtés */
+  width: 100%;
+  /* Occupe toute la largeur disponible */
+}
+
+/* Style du titre de l'employé (nom) - avec un petit espace en dessous */
+.employee-content h3 {
+  margin-bottom: 0.25rem;
+  /* Petit espace sous le titre */
+}
+
+/* Style du titre de poste de l'employé - utilise la couleur principale */
+.employee-title {
+  color: var(--primary-color);
+  /* Texte en couleur primaire */
+  font-weight: 600;
+  /* Police semi-grasse */
+  margin-bottom: 1.5rem;
+  /* Espace important sous le titre */
+}
+
+/* Style de citation d'employé - avec bordure gauche et fond clair */
+.employee-quote {
+  background-color: var(--gray-100);
+  /* Fond gris clair */
+  border-left: 4px solid var(--primary-color);
+  /* Bordure gauche colorée */
+  padding: 1.5rem;
+  /* Rembourrage important */
+  margin-bottom: 1.5rem;
+  /* Marge inférieure */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  position: relative;
+  /* Positionnement relatif pour les éléments enfants absolus */
+}
+
+/* Guillemet décoratif pour la citation - positionné en absolu */
+.employee-quote::before {
+  content: '"';
+  /* Ajoute un guillemet comme contenu */
+  position: absolute;
+  /* Positionnement absolu */
+  top: 0;
+  /* Aligné en haut */
+  left: 0.5rem;
+  /* Légèrement décalé de la gauche */
+  font-size: 3rem;
+  /* Police très grande */
+  color: var(--gray-300);
+  /* Couleur grise claire */
+  line-height: 1;
+  /* Hauteur de ligne minimale */
+}
+
+/* Style du texte dans la citation - positionné au-dessus du guillemet décoratif */
+.employee-quote p {
+  position: relative;
+  /* Position relative pour z-index */
+  z-index: 1;
+  /* S'affiche au-dessus du guillemet décoratif */
+  margin-bottom: 0;
+  /* Pas de marge en bas */
+  font-style: italic;
+  /* Texte en italique */
+}
+
+/* Zone des boutons d'action - alignés horizontalement et centrés */
+.employee-actions {
+  display: flex;
+  /* Disposition flexible */
+  justify-content: center;
+  /* Centrage horizontal */
+  gap: 1rem;
+  /* Espace entre les éléments */
+}
+
+/* SECTION DES EMPLACEMENTS */
+.locations {
+  padding: 5rem 0;
+  /* Rembourrage vertical important */
+  background-color: var(--gray-100);
+  /* Fond gris clair */
+}
+
+/* Conteneur des cartes d'emplacement - grille responsive */
+.locations-container {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Colonnes responsives */
+  gap: 2rem;
+  /* Espace entre les cartes */
+  max-width: 1000px;
+  /* Largeur maximale */
+  margin: 0 auto;
+  /* Centrage horizontal */
+}
+
+/* Style des cartes d'emplacement - avec animation au survol */
+.location-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 2rem;
+  /* Rembourrage important */
+  text-align: center;
+  /* Texte centré */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Animation au survol des cartes d'emplacement */
+.location-card:hover {
+  transform: translateY(-10px);
+  /* Déplacement vers le haut */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée */
+}
+
+/* Conteneur du drapeau d'emplacement - forme circulaire */
+.location-flag {
+  width: 80px;
+  /* Largeur fixe */
+  height: 80px;
+  /* Hauteur fixe */
+  margin: 0 auto 1.5rem;
+  /* Centrage horizontal et marge en bas */
+  border-radius: 50%;
+  /* Forme circulaire */
+  overflow: hidden;
+  /* Cache le contenu qui dépasse */
+  border: 3px solid var(--primary-light);
+  /* Bordure colorée */
+}
+
+/* Image du drapeau - ajustée pour remplir le cercle */
+.location-flag img {
+  width: 100%;
+  /* Occupe toute la largeur */
+  height: 100%;
+  /* Occupe toute la hauteur */
+  object-fit: cover;
+  /* Redimensionnement avec recadrage */
+}
+
+/* Titre de la carte d'emplacement */
+.location-card h3 {
+  margin-bottom: 1rem;
+  /* Espace sous le titre */
+}
+
+/* Style pour la liste des villes - avec icône */
+.location-cities {
+  display: flex;
+  /* Disposition flexible */
+  align-items: center;
+  /* Alignement vertical centré */
+  justify-content: center;
+  /* Centrage horizontal */
+  color: var(--gray-600);
+  /* Couleur grise moyenne */
+}
+
+/* Style des icônes dans la liste des villes */
+.location-cities i,
+.location-cities svg {
+  margin-right: 0.5rem;
+  /* Espace à droite de l'icône */
+  color: var(--primary-color);
+  /* Icône en couleur primaire */
+}
+/* ===== STATISTICS SECTION ===== */
+/* Section de statistiques avec arrière-plan dégradé sur une image fixe */
+.statistics {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: var(--primary-color);
+  /* Couleur de fond principale */
+  color: white;
+  /* Texte en blanc */
+  background-image: linear-gradient(135deg, rgba(0, 86, 179, 0.9) 0%, rgba(0, 31, 63, 0.9) 100%),
+    url("/images/stats-bg.jpg");
+  /* Superposition d'un dégradé bleu sur une image */
+  background-size: cover;
+  /* L'image couvre tout l'élément */
+  background-position: center;
+  /* Centrage de l'image */
+  background-attachment: fixed;
+  /* L'arrière-plan reste fixe lors du défilement (effet parallaxe) */
+}
+
+/* Conteneur des cartes de statistiques - grille responsive */
+.stats-container {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Colonnes responsives */
+  gap: 2rem;
+  /* Espacement entre les cartes */
+  max-width: 1000px;
+  /* Largeur maximale du conteneur */
+  margin: 0 auto;
+  /* Centrage horizontal */
+}
+
+/* Style des cartes de statistiques - effet verre dépoli */
+.stat-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Fond blanc semi-transparent */
+  backdrop-filter: blur(10px);
+  /* Effet de flou pour l'arrière-plan (verre dépoli) */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 2rem;
+  /* Rembourrage intérieur */
+  text-align: center;
+  /* Texte centré */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Animation au survol des cartes de statistiques */
+.stat-card:hover {
+  transform: translateY(-10px);
+  /* Déplacement vers le haut */
+  background-color: rgba(255, 255, 255, 0.2);
+  /* Fond légèrement plus opaque */
+}
+
+/* Style du nombre dans les statistiques - texte avec dégradé */
+.stat-number {
+  font-size: 3rem;
+  /* Très grande taille de police */
+  font-weight: 700;
+  /* Police en gras */
+  margin-bottom: 0.5rem;
+  /* Petite marge inférieure */
+  background: linear-gradient(to right, #ffffff, #e6e6e6);
+  /* Dégradé de blanc */
+  -webkit-background-clip: text;
+  /* Applique le dégradé au texte uniquement */
+  -webkit-text-fill-color: transparent;
+  /* Rend le texte transparent pour voir le dégradé */
+}
+
+/* Commentaire indiquant la fin du code pour index.html */
+/* Fin de la page index.html */
+
+/* Style de l'étiquette de statistique */
+.stat-label {
+  font-size: 1.25rem;
+  /* Taille de police moyenne */
+  font-weight: 500;
+  /* Police semi-grasse */
+  margin-bottom: 0;
+  /* Pas de marge inférieure */
+}
+
+/* ===== INDUSTRY SECTORS ===== */
+/* Section des secteurs d'industrie */
+.industry-sectors {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: white;
+  /* Fond blanc */
+}
+
+/* Grille des secteurs - disposition responsive */
+.sectors-grid {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* Colonnes responsives */
+  gap: 2rem;
+  /* Espacement entre les cartes */
+}
+
+/* Style des cartes de secteur */
+.sector-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 2rem;
+  /* Rembourrage intérieur */
+  box-shadow: var(--box-shadow-sm);
+  /* Légère ombre portée */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+  text-align: center;
+  /* Texte centré */
+}
+
+/* Animation au survol des cartes de secteur */
+.sector-card:hover {
+  transform: translateY(-10px);
+  /* Déplacement vers le haut */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée */
+}
+
+/* Style de l'icône de secteur - cercle coloré */
+.sector-icon {
+  width: 80px;
+  /* Largeur fixe */
+  height: 80px;
+  /* Hauteur fixe */
+  background-color: var(--primary-light);
+  /* Couleur principale claire */
+  color: var(--primary-color);
+  /* Couleur du texte principale */
+  border-radius: 50%;
+  /* Forme circulaire */
+  display: flex;
+  /* Disposition flexible */
+  align-items: center;
+  /* Centrage vertical du contenu */
+  justify-content: center;
+  /* Centrage horizontal du contenu */
+  margin: 0 auto 1.5rem;
+  /* Centrage horizontal avec marge inférieure */
+  font-size: 2rem;
+  /* Grande taille d'icône */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Animation de l'icône au survol de la carte */
+.sector-card:hover .sector-icon {
+  background-color: var(--primary-color);
+  /* Changement de couleur de fond */
+  color: white;
+  /* Texte en blanc */
+  transform: rotateY(180deg);
+  /* Rotation 3D sur l'axe Y (effet flip) */
+}
+
+/* Style du titre de la carte secteur */
+.sector-card h3 {
+  margin-bottom: 1rem;
+  /* Marge inférieure */
+}
+
+/* Style du paragraphe dans la carte secteur */
+.sector-card p {
+  color: var(--gray-600);
+  /* Couleur de texte gris moyen */
+  margin-bottom: 1.5rem;
+  /* Marge inférieure */
+}
+
+/* ===== PROCESS SECTION ===== */
+/* Section du processus */
+.process-section {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: var(--gray-100);
+  /* Fond gris clair */
+}
+
+/* Timeline du processus - avec ligne verticale */
+.process-timeline {
+  max-width: 800px;
+  /* Largeur maximale */
+  margin: 0 auto;
+  /* Centrage horizontal */
+  position: relative;
+  /* Pour le positionnement de la ligne verticale */
+}
+
+/* Ligne verticale de la timeline */
+.process-timeline::before {
+  content: "";
+  /* Contenu vide pour l'élément pseudo */
+  position: absolute;
+  /* Positionnement absolu */
+  top: 0;
+  /* Aligné au sommet */
+  bottom: 0;
+  /* S'étend jusqu'en bas */
+  left: 24px;
+  /* Position horizontale */
+  width: 4px;
+  /* Largeur de la ligne */
+  background-color: var(--primary-light);
+  /* Couleur principale claire */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+}
+
+/* Étape du processus - élément horizontal */
+.process-step {
+  display: flex;
+  /* Disposition flexible */
+  margin-bottom: 2rem;
+  /* Marge inférieure */
+  position: relative;
+  /* Pour le positionnement des enfants */
+}
+
+/* Dernière étape sans marge inférieure */
+.process-step:last-child {
+  margin-bottom: 0;
+  /* Supprime la marge du dernier élément */
+}
+
+/* Numéro d'étape - cercle avec chiffre */
+.step-number {
+  width: 50px;
+  /* Largeur fixe */
+  height: 50px;
+  /* Hauteur fixe */
+  background-color: var(--primary-color);
+  /* Couleur principale */
+  color: white;
+  /* Texte en blanc */
+  border-radius: 50%;
+  /* Forme circulaire */
+  display: flex;
+  /* Disposition flexible */
+  align-items: center;
+  /* Centrage vertical */
+  justify-content: center;
+  /* Centrage horizontal */
+  font-weight: 700;
+  /* Police en gras */
+  font-size: 1.25rem;
+  /* Taille moyenne */
+  margin-right: 1.5rem;
+  /* Marge à droite */
+  position: relative;
+  /* Pour z-index */
+  z-index: 2;
+  /* Au-dessus de la ligne verticale */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+/* Animation au survol du numéro d'étape - agrandissement avec halo */
+.process-step:hover .step-number {
+  transform: scale(1.1);
+  /* Agrandissement de 10% */
+  box-shadow: 0 0 0 5px var(--primary-light);
+  /* Halo lumineux autour du cercle */
+}
+
+/* Contenu de l'étape - carte blanche */
+.step-content {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 1.5rem;
+  /* Espacement interne */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+  flex-grow: 1;
+  /* Occupe tout l'espace disponible */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Animation au survol du contenu de l'étape - déplacement latéral */
+.process-step:hover .step-content {
+  transform: translateX(10px);
+  /* Déplacement vers la droite */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée */
+}
+
+/* Style du titre dans le contenu de l'étape */
+.step-content h3 {
+  margin-bottom: 0.5rem;
+  /* Petite marge inférieure */
+  color: var(--primary-color);
+  /* Couleur principale */
+}
+
+/* Style du paragraphe dans le contenu de l'étape */
+.step-content p {
+  color: var(--gray-600);
+  /* Couleur grise moyenne */
+  margin-bottom: 0;
+  /* Pas de marge inférieure */
+}
+
+/* ===== CASE STUDIES ===== */
+/* Section des études de cas */
+.case-studies {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: white;
+  /* Fond blanc */
+}
+
+/* Grille des études de cas - disposition responsive */
+.case-studies-grid {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Colonnes responsives */
+  gap: 2rem;
+  /* Espacement entre les cartes */
+  margin-bottom: 2rem;
+  /* Marge inférieure */
+  /* Commentaire: Espace entre les rangées */
+}
+
+/* Style commun pour toutes les cartes d'étude de cas */
+.case-study-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  overflow: hidden;
+  /* Masque les dépassements (pour l'image) */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+  height: 100%;
+  /* Hauteur maximale */
+  display: flex;
+  /* Disposition flexible */
+  flex-direction: column;
+  /* Empilement vertical */
+}
+
+/* Animation au survol des cartes d'étude de cas */
+.case-study-card:hover {
+  transform: translateY(-10px);
+  /* Déplacement vers le haut */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée */
+}
+
+/* Conteneur de l'image d'étude de cas */
+.case-study-image {
+  height: 200px;
+  /* Hauteur fixe */
+  overflow: hidden;
+  /* Masque les dépassements */
+}
+
+/* Image d'étude de cas - avec zoom au survol */
+.case-study-image img {
+  width: 100%;
+  /* Largeur totale */
+  height: 100%;
+  /* Hauteur totale */
+  object-fit: cover;
+  /* Redimensionnement avec recadrage */
+  object-position: center;
+  /* Centrage du recadrage */
+  transition: transform var(--transition-medium);
+  /* Animation douce */
+}
+
+/* Animation de zoom sur l'image au survol de la carte */
+.case-study-card:hover .case-study-image img {
+  transform: scale(1.1);
+  /* Agrandissement de 10% */
+}
+
+/* Contenu de la carte d'étude de cas */
+.case-study-content {
+  padding: 1.5rem;
+  /* Espacement interne */
+  flex-grow: 1;
+  /* Occupe l'espace disponible */
+  display: flex;
+  /* Disposition flexible */
+  flex-direction: column;
+  /* Empilement vertical */
+}
+
+/* Titre de l'étude de cas */
+.case-study-content h3 {
+  margin-bottom: 0.5rem;
+  /* Petite marge inférieure */
+  font-size: 1.25rem;
+  /* Taille moyenne */
+}
+
+/* Style pour le nom du client de l'étude de cas */
+.case-study-client {
+  color: var(--primary-color);
+  /* Couleur principale */
+  font-weight: 600;
+  /* Police semi-grasse */
+  margin-bottom: 1rem;
+  /* Marge inférieure */
+}
+
+/* Paragraphe dans le contenu de l'étude de cas */
+.case-study-content p {
+  color: var(--gray-600);
+  /* Couleur grise moyenne */
+  margin-bottom: 1.5rem;
+  /* Marge inférieure */
+}
+
+/* Section spécifique pour industrie et commerce - deuxième rangée */
+.industry-commerce-section {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Colonnes responsives */
+  gap: 2rem;
+  /* Espacement entre les cartes */
+}
+
+/* Uniformisation des cartes de la deuxième rangée */
+.industry-commerce-section .case-study-card {
+  width: 100%;
+  /* Largeur totale */
+  max-width: none;
+  /* Pas de largeur maximale */
+}
+
+/* Même hauteur d'image pour les cartes de la deuxième rangée */
+.industry-commerce-section .case-study-image {
+  height: 200px;
+  /* Hauteur fixe */
+  /* Commentaire: Même hauteur que les images du haut */
+}
+
+/* ===== CTA SECTION ===== */
+/* Section d'appel à l'action (Call To Action) */
+.cta-section {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: var(--primary-color);
+  /* Couleur principale */
+  color: white;
+  /* Texte en blanc */
+  background-image: linear-gradient(135deg, rgba(0, 86, 179, 0.9) 0%, rgba(0, 31, 63, 0.9) 100%),
+    url("/images/cta-bg.jpg");
+  /* Superposition d'un dégradé bleu sur une image */
+  background-size: cover;
+  /* L'image couvre tout l'élément */
+  background-position: center;
+  /* Centrage de l'image */
+}
+
+/* Contenu de la section CTA - centré */
+.cta-content {
+  max-width: 800px;
+  /* Largeur maximale */
+  margin: 0 auto;
+  /* Centrage horizontal */
+  text-align: center;
+  /* Texte centré */
+}
+
+/* Titre principal du CTA */
+.cta-content h2 {
+  font-size: 2.5rem;
+  /* Très grande taille */
+  margin-bottom: 1.5rem;
+  /* Marge inférieure */
+}
+
+/* Paragraphe du CTA */
+.cta-content p {
+  font-size: 1.25rem;
+  /* Taille moyenne */
+  margin-bottom: 2rem;
+  /* Marge inférieure importante */
+  opacity: 0.9;
+  /* Légèrement transparent */
+}
+
+/* ===== CONTACT SECTION ===== */
+/* Section de contact */
+.contact-section {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: white;
+  /* Fond blanc */
+}
+
+/* Conteneur des informations de contact - disposition responsive */
+.contact-container {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Colonnes responsives */
+  gap: 2rem;
+  /* Espacement entre les éléments */
+}
+
+/* Carte d'informations de contact */
+.contact-info-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 2rem;
+  /* Espacement interne */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+}
+
+/* Titre de la carte d'informations */
+.contact-info-card h2 {
+  margin-bottom: 2rem;
+  /* Marge inférieure importante */
+}
+
+/* Élément individuel d'information de contact */
+.contact-info-item {
+  display: flex;
+  /* Disposition flexible */
+  margin-bottom: 1.5rem;
+  /* Marge inférieure */
+}
+
+/* Icône de contact - cercle coloré */
+.contact-icon {
+  width: 50px;
+  /* Largeur fixe */
+  height: 50px;
+  /* Hauteur fixe */
+  background-color: var(--primary-light);
+  /* Couleur claire principale */
+  color: var(--primary-color);
+  /* Couleur principale */
+  border-radius: 50%;
+  /* Forme circulaire */
+  display: flex;
+  /* Disposition flexible */
+  align-items: center;
+  /* Centrage vertical */
+  justify-content: center;
+  /* Centrage horizontal */
+  margin-right: 1rem;
+  /* Marge à droite */
+  font-size: 1.25rem;
+  /* Taille moyenne */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Animation de l'icône au survol */
+.contact-info-item:hover .contact-icon {
+  background-color: var(--primary-color);
+  /* Changement de couleur de fond */
+  color: white;
+  /* Texte en blanc */
+  transform: scale(1.1);
+  /* Agrandissement de 10% */
+}
+/* Style du texte dans la section contact */
+.contact-text h3 {
+  margin-bottom: 0.25rem;
+  /* Petite marge inférieure */
+}
+
+/* Style du paragraphe dans le texte de contact */
+.contact-text p {
+  color: var(--gray-600);
+  /* Couleur grise moyenne */
+  margin-bottom: 0;
+  /* Pas de marge inférieure */
+}
+
+/* Titre de la section réseaux sociaux */
+.contact-social h3 {
+  margin-bottom: 1rem;
+  /* Marge inférieure */
+}
+
+/* Conteneur des icônes de réseaux sociaux */
+.social-icons {
+  display: flex;
+  /* Disposition flexible */
+  gap: 1rem;
+  /* Espacement entre les icônes */
+}
+
+/* Style des icônes de réseaux sociaux */
+.social-icon {
+  width: 40px;
+  /* Largeur fixe */
+  height: 40px;
+  /* Hauteur fixe */
+  background-color: var(--gray-200);
+  /* Fond gris clair */
+  color: var(--gray-700);
+  /* Couleur gris foncé */
+  border-radius: 50%;
+  /* Forme circulaire */
+  display: flex;
+  /* Disposition flexible */
+  align-items: center;
+  /* Centrage vertical */
+  justify-content: center;
+  /* Centrage horizontal */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Animation au survol des icônes sociales */
+.social-icon:hover {
+  background-color: var(--primary-color);
+  /* Couleur principale */
+  color: white;
+  /* Texte en blanc */
+  transform: translateY(-5px);
+  /* Déplacement vers le haut */
+}
+
+/* Conteneur du formulaire de contact */
+.contact-form-container {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 2rem;
+  /* Espacement interne */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+}
+
+/* Titre du formulaire de contact */
+.contact-form-container h2 {
+  margin-bottom: 2rem;
+  /* Marge inférieure importante */
+}
+
+/* Formulaire de contact - disposition en grille */
+.contact-form {
+  display: grid;
+  /* Disposition en grille */
+  grid-template-columns: repeat(2, 1fr);
+  /* Deux colonnes de largeur égale */
+  gap: 1.5rem;
+  /* Espacement entre les éléments */
+}
+
+/* Groupe de champs du formulaire */
+.form-group {
+  margin-bottom: 1rem;
+  /* Marge inférieure */
+}
+
+/* Groupe de champs pleine largeur */
+.form-group.full-width {
+  grid-column: span 2;
+  /* S'étend sur les deux colonnes */
+}
+
+/* Libellé des champs de formulaire */
+.form-group label {
+  display: block;
+  /* Affichage en bloc */
+  margin-bottom: 0.5rem;
+  /* Marge inférieure */
+  font-weight: 500;
+  /* Police semi-grasse */
+}
+
+/* Style des champs de saisie du formulaire */
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  /* Largeur totale */
+  padding: 0.75rem 1rem;
+  /* Espacement interne */
+  border: 1px solid var(--gray-300);
+  /* Bordure grise */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Style des champs de saisie au focus */
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  /* Supprime le contour par défaut */
+  border-color: var(--primary-color);
+  /* Bordure colorée */
+  box-shadow: 0 0 0 3px rgba(0, 86, 179, 0.2);
+  /* Halo subtil */
+}
+
+/* Groupe de case à cocher */
+.checkbox-group {
+  display: flex;
+  /* Disposition flexible */
+  align-items: flex-start;
+  /* Alignement en haut */
+}
+
+/* Case à cocher */
+.checkbox-group input {
+  width: auto;
+  /* Largeur automatique */
+  margin-right: 0.5rem;
+  /* Marge à droite */
+  margin-top: 0.25rem;
+  /* Marge en haut pour alignement avec le texte */
+}
+
+/* Bouton d'envoi du formulaire */
+.submit-btn {
+  width: 100%;
+  /* Largeur totale */
+}
+
+/* ===== MAP SECTION ===== */
+/* Section de carte */
+.map-section {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: var(--gray-100);
+  /* Fond gris clair */
+}
+
+/* Conteneur de la carte */
+.map-container {
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  overflow: hidden;
+  /* Masque les dépassements */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+}
+
+/* ===== FAQ SECTION ===== */
+/* Section FAQ (Foire Aux Questions) */
+.faq-section {
+  padding: 5rem 0;
+  /* Espacement vertical important */
+  background-color: white;
+  /* Fond blanc */
+}
+
+/* Conteneur des FAQs */
+.faq-container {
+  max-width: 800px;
+  /* Largeur maximale */
+  margin: 0 auto;
+  /* Centrage horizontal */
+}
+
+/* Élément individuel de FAQ */
+.faq-item {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  margin-bottom: 1rem;
+  /* Marge inférieure */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+  overflow: hidden;
+  /* Masque les dépassements */
+}
+
+/* Titre de question FAQ - élément cliquable */
+.faq-question {
+  padding: 1.5rem;
+  /* Espacement interne */
+  display: flex;
+  /* Disposition flexible */
+  align-items: center;
+  /* Centrage vertical */
+  justify-content: space-between;
+  /* Espace entre éléments (pour l'icône) */
+  cursor: pointer;
+  /* Curseur de type pointeur */
+  transition: all var(--transition-fast);
+  /* Animation douce */
+}
+
+/* Titre dans la question FAQ */
+.faq-question h3 {
+  margin-bottom: 0;
+  /* Pas de marge inférieure */
+  font-size: 1.25rem;
+  /* Taille moyenne */
+}
+/* ===== BOUTON TOGGLE DE LA FAQ ===== */
+.faq-toggle {
+  width: 30px;
+  /* largeur du bouton */
+  height: 30px;
+  /* hauteur du bouton */
+  background-color: var(--primary-light);
+  /* couleur de fond claire */
+  color: var(--primary-color);
+  /* couleur du texte (icône) */
+  border-radius: 50%;
+  /* forme circulaire */
+  display: flex;
+  /* utilisation de Flexbox */
+  align-items: center;
+  /* centrage vertical */
+  justify-content: center;
+  /* centrage horizontal */
+  transition: all var(--transition-fast);
+  /* transition fluide */
+}
+
+/* Effet lorsque l'élément FAQ est actif ou au survol de la question */
+.faq-item.active .faq-toggle,
+.faq-question:hover .faq-toggle {
+  background-color: var(--primary-color);
+  /* fond coloré */
+  color: white;
+  /* texte blanc */
+  transform: rotate(180deg);
+  /* rotation de l'icône */
+}
+
+/* ===== CONTENU DE LA RÉPONSE DE LA FAQ ===== */
+.faq-answer {
+  padding: 0 1.5rem;
+  /* espacement horizontal */
+  max-height: 0;
+  /* masqué par défaut */
+  overflow: hidden;
+  /* cacher le débordement */
+  transition: all var(--transition-fast);
+  /* transition fluide */
+}
+
+/* Lorsque l'élément FAQ est actif */
+.faq-item.active .faq-answer {
+  padding: 0 1.5rem 1.5rem;
+  /* espacement complet */
+  max-height: 500px;
+  /* hauteur visible */
+}
+
+/* ===== PIED DE PAGE ===== */
+.footer {
+  background-color: var(--secondary-color);
+  /* couleur de fond */
+  color: white;
+  /* texte blanc */
+  padding-top: 5rem;
+  /* marge supérieure */
+}
+
+/* Contenu principal du footer organisé en grille responsive */
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  /* colonnes adaptatives */
+  gap: 2rem;
+  /* espacement entre les sections */
+  margin-bottom: 3rem;
+  /* marge en bas */
+}
+
+/* Titres des sections du footer */
+.footer-section h3 {
+  position: relative;
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.75rem;
+}
+
+/* Soulignement décoratif des titres */
+.footer-section h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background-color: var(--primary-color);
+  border-radius: var(--border-radius);
+}
+
+/* Paragraphe des sections du footer */
+.footer-section p {
+  color: var(--gray-400);
+  margin-bottom: 1.5rem;
+}
+
+/* Liens sociaux en ligne avec espacement */
+.social-links {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Style des icônes sociales */
+.social-link {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+/* Effet au survol des liens sociaux */
+.social-link:hover {
+  background-color: var(--primary-color);
+  color: white;
+  transform: translateY(-5px);
+}
+
+/* Liens de navigation du footer */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.footer-links a {
+  color: var(--gray-400);
+  display: flex;
+  align-items: center;
+  transition: all var(--transition-fast);
+}
+
+/* Icônes dans les liens */
+.footer-links a i,
+.footer-links a svg {
+  margin-right: 0.5rem;
+  color: var(--primary-color);
+}
+
+/* Effet au survol des liens */
+.footer-links a:hover {
+  color: white;
+  transform: translateX(5px);
+}
+
+/* Informations de contact */
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-info li {
+  display: flex;
+  color: var(--gray-400);
+}
+
+/* Icônes dans les infos de contact */
+.contact-info li i,
+.contact-info li svg {
+  margin-right: 1rem;
+  color: var(--primary-color);
+}
+
+/* Formulaire de newsletter */
+.newsletter-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Champ de saisie newsletter */
+.newsletter-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  color: white;
+  border-radius: var(--border-radius);
+}
+
+/* Effet au focus */
+.newsletter-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+/* Bouton d'envoi de la newsletter */
+.newsletter-button {
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  padding: 0.75rem 1rem;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  font-weight: 600;
+  transition: all var(--transition-fast);
+}
+
+/* Effet au survol du bouton */
+.newsletter-button:hover {
+  background-color: var(--primary-dark);
+  transform: translateY(-3px);
+}
+
+/* Bas du footer (mentions légales, liens rapides...) */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 1.5rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Paragraphe du bas */
+.footer-bottom p {
+  margin-bottom: 0;
+}
+
+/* Liens du bas de page */
+.footer-bottom-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+/* Style des liens */
+.footer-bottom-links a {
+  color: var(--gray-400);
+  transition: color var(--transition-fast);
+}
+
+/* Effet hover */
+.footer-bottom-links a:hover {
+  color: white;
+}
+
+/* ===== ANIMATIONS ===== */
+.animate-fade-in {
+  animation: fadeIn 1s ease-out;
+}
+
+/* Définition de l’animation fadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ===== Animation d'apparition au scroll ===== */
+.animate-on-scroll {
+  opacity: 0;
+  /* Élément invisible au départ */
+  transform: translateY(30px);
+  /* Déplacé vers le bas de 30px */
+  transition: all 0.8s ease-out;
+  /* Transition douce de tous les changements sur 0.8s */
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  /* Élément devient visible */
+  transform: translateY(0);
+  /* Retourne à sa position d'origine */
+}
+
+/* ===== STYLES RESPONSIVES ===== */
+
+/* Pour les écrans ≤ 992px */
+@media (max-width: 992px) {
+  .nav-links {
+    display: none;
+    /* Cache les liens de navigation */
+  }
+
+  .menu-toggle {
+    display: block;
+    /* Affiche le bouton de menu burger */
+  }
+
+  .search-container {
+    display: none;
+    /* Cache le champ de recherche */
+  }
+
+  .hero-content h1 {
+    font-size: 2.5rem;
+    /* Réduit la taille du titre principal */
+  }
+
+  .employee-card {
+    flex-direction: column;
+    /* Dispose les éléments en colonne (au lieu de ligne) */
+  }
+
+  .employee-image-container {
+    margin-top: 0;
+    /* Supprime la marge supérieure */
+  }
+
+  .process-timeline::before {
+    left: 20px;
+    /* Décale la ligne verticale vers la gauche */
+  }
+
+  .step-number {
+    width: 40px;
+    /* Réduit la largeur du numéro d'étape */
+    height: 40px;
+    /* Réduit la hauteur du numéro d'étape */
+    font-size: 1rem;
+    /* Réduit la taille de la police */
+  }
+
+  .contact-form {
+    grid-template-columns: 1fr;
+    /* Formulaire en une seule colonne */
+  }
+
+  .form-group.full-width {
+    grid-column: span 1;
+    /* Étend l'élément sur une seule colonne */
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    /* Footer empilé en colonne */
+    text-align: center;
+    /* Centrage du texte */
+  }
+
+  .footer-bottom-links {
+    justify-content: center;
+    /* Centre les liens horizontalement */
+    margin-top: 1rem;
+    /* Ajoute un espacement en haut */
+  }
+}
+
+/* Pour les écrans ≤ 768px */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2rem;
+    /* Titre principal plus petit */
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    /* Empile les boutons verticalement */
+    align-items: flex-start;
+    /* Aligne à gauche */
+  }
+
+  .section-header h2 {
+    font-size: 1.75rem;
+    /* Titre de section réduit */
+  }
+
+  .stats-container {
+    grid-template-columns: 1fr;
+    /* Statistiques en une seule colonne */
+  }
+
+  .case-studies-grid {
+    grid-template-columns: 1fr;
+    /* Études de cas sur une colonne */
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    /* Formulaire de contact sur une colonne */
+  }
+}
+
+/* Pour les écrans ≤ 576px */
+@media (max-width: 576px) {
+  .container {
+    padding: 0 1.5rem;
+    /* Réduit les marges latérales */
+  }
+
+  .hero,
+  .page-hero {
+    padding: 4rem 0;
+    /* Réduction de l'espacement vertical */
+  }
+
+  .hero-content h1 {
+    font-size: 1.75rem;
+    /* Titre principal encore plus petit */
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    /* Texte normal du hero plus petit */
+  }
+
+  .btn {
+    width: 100%;
+    /* Les boutons prennent toute la largeur */
+  }
+
+  .section-header h2 {
+    font-size: 1.5rem;
+    /* Titre de section plus petit */
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr;
+    /* Footer en une seule colonne */
+  }
+}
+
+/* ===== STYLES DE LA PAGE SOLUTIONS ===== */
+.solutions-section {
+  padding: 5rem 0;
+  /* Espacement haut et bas */
+  background-color: white;
+  /* Fond blanc */
+}
+
+.solutions-grid {
+  display: grid;
+  /* Active le modèle de grille */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Colonnes responsives : minimum 300px */
+  gap: 2rem;
+  /* Espacement entre les éléments */
+  margin-top: 3rem;
+  /* Marge en haut de la grille */
+}
+
+.solution-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis personnalisés */
+  padding: 2rem;
+  /* Espacement intérieur */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère personnalisée */
+  transition: all var(--transition-fast);
+  /* Animation rapide personnalisée */
+  display: flex;
+  /* Flexbox verticale */
+  flex-direction: column;
+  align-items: center;
+  /* Centre horizontalement */
+  text-align: center;
+  /* Centre le texte */
+}
+
+.solution-card:hover {
+  transform: translateY(-10px);
+  /* Légère élévation au survol */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus marquée au survol */
+}
+/* ===== Icône de chaque carte solution ===== */
+.solution-icon {
+  width: 80px;
+  /* Largeur fixe de l'icône */
+  height: 80px;
+  /* Hauteur fixe de l'icône */
+  background-color: var(--primary-light);
+  /* Couleur de fond claire (variable CSS personnalisée) */
+  color: var(--primary-color);
+  /* Couleur du texte (généralement l’icône) */
+  border-radius: 50%;
+  /* Rend l’icône parfaitement ronde */
+  display: flex;
+  /* Utilisation de Flexbox pour centrer */
+  align-items: center;
+  /* Centre verticalement */
+  justify-content: center;
+  /* Centre horizontalement */
+  margin-bottom: 1.5rem;
+  /* Espacement en bas entre l’icône et le texte */
+  font-size: 2rem;
+  /* Taille de l’icône */
+  transition: all var(--transition-fast);
+  /* Transition fluide lors d’un survol */
+}
+
+/* Effet au survol d’une carte : animation de l’icône */
+.solution-card:hover .solution-icon {
+  background-color: var(--primary-color);
+  /* Fond devient la couleur principale */
+  color: white;
+  /* Couleur de l’icône devient blanche */
+  transform: rotateY(180deg);
+  /* Rotation horizontale à 180° (effet visuel) */
+}
+
+/* Titre de la carte */
+.solution-card h3 {
+  margin-bottom: 1rem;
+  /* Espacement sous le titre */
+  transition: color var(--transition-fast);
+  /* Transition fluide de la couleur */
+}
+
+/* Changement de couleur du titre au survol */
+.solution-card:hover h3 {
+  color: var(--primary-color);
+  /* Devient de la couleur principale */
+}
+
+/* Paragraphe de la carte */
+.solution-card p {
+  color: var(--gray-600);
+  /* Couleur grise pour le texte */
+  margin-bottom: 1.5rem;
+  /* Espacement en bas */
+}
+
+
+/* ===== STYLES DE LA SECTION INFORMATIONS ===== */
+.info-section {
+  padding: 5rem 0;
+  /* Espacement haut et bas de la section */
+  background-color: white;
+  /* Fond blanc */
+}
+
+/* Grille de disposition des cartes */
+.info-grid {
+  display: grid;
+  /* Active la grille */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Colonnes responsives min 300px */
+  gap: 2rem;
+  /* Espacement entre les éléments */
+  margin-top: 3rem;
+  /* Marge au-dessus de la grille */
+}
+
+/* Style des cartes individuelles */
+.info-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis personnalisés */
+  padding: 2rem;
+  /* Espacement intérieur */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+  transition: all var(--transition-fast);
+  /* Animation fluide */
+  height: 100%;
+  /* Prend toute la hauteur disponible */
+}
+
+/* Animation de la carte au survol */
+.info-card:hover {
+  transform: translateY(-10px);
+  /* Légère élévation de la carte */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus forte au survol */
+}
+
+/* Icône de la carte information */
+.info-icon {
+  width: 60px;
+  /* Taille réduite comparée à l'icône solution */
+  height: 60px;
+  background-color: var(--primary-light);
+  /* Fond clair */
+  color: var(--primary-color);
+  /* Couleur principale pour l’icône */
+  border-radius: 50%;
+  /* Forme ronde */
+  display: flex;
+  /* Centre le contenu */
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+  /* Espace sous l’icône */
+  font-size: 1.5rem;
+  /* Taille de l’icône plus petite */
+  transition: all var(--transition-fast);
+  /* Animation fluide */
+}
+
+/* Animation au survol de la carte : l'icône tourne */
+.info-card:hover .info-icon {
+  background-color: var(--primary-color);
+  /* Fond change */
+  color: white;
+  /* Icône devient blanche */
+  transform: rotateY(180deg);
+  /* Rotation 3D */
+}
+
+/* Titre de la carte information */
+.info-card h3 {
+  margin-bottom: 1rem;
+  /* Espacement sous le titre */
+  transition: color var(--transition-fast);
+  /* Animation fluide de couleur */
+}
+
+/* Changement de couleur du titre au survol */
+.info-card:hover h3 {
+  color: var(--primary-color);
+}
+
+/* Paragraphe de la carte */
+.info-card p {
+  color: var(--gray-600);
+  /* Texte gris clair */
+  margin-bottom: 0;
+  /* Pas d’espacement en dessous */
+}
+
+
+/* ===== Liste des partenaires ===== */
+.partner-list {
+  padding-left: 0;
+  /* Supprime la marge par défaut des listes */
+}
+
+/* Chaque élément de la liste */
+.partner-list li {
+  margin-bottom: 0.5rem;
+  /* Petit espacement entre chaque partenaire */
+  display: flex;
+  /* Pour aligner icône + texte horizontalement */
+  align-items: center;
+  /* Centrage vertical */
+}
+
+/* Icône dans la liste */
+.partner-list li i {
+  color: var(--primary-color);
+  /* Couleur principale pour l’icône */
+  margin-right: 0.5rem;
+  /* Espacement entre l’icône et le texte */
+}
+/* ===== SECTION : Chiffres clés ===== */
+.key-figures {
+  padding: 5rem 0;
+  /* Espacement vertical */
+  background-color: var(--gray-100);
+  /* Couleur de fond grise claire */
+}
+
+.figures-grid {
+  display: grid;
+  /* Utilisation du système de grille */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  /* Colonnes responsives, minimum 200px */
+  gap: 2rem;
+  /* Espace entre les cartes */
+  margin-top: 3rem;
+  /* Espace en haut de la grille */
+}
+
+.figure-card {
+  background-color: white;
+  /* Fond blanc */
+  border-radius: var(--border-radius);
+  /* Coins arrondis */
+  padding: 2rem;
+  /* Espacement intérieur */
+  box-shadow: var(--box-shadow-sm);
+  /* Ombre légère */
+  transition: all var(--transition-fast);
+  /* Animation fluide */
+  text-align: center;
+  /* Centrage du texte */
+}
+
+.figure-card:hover {
+  transform: translateY(-10px);
+  /* Légère élévation au survol */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus prononcée */
+}
+
+.figure-number {
+  font-size: 2.5rem;
+  /* Chiffre plus grand */
+  font-weight: 700;
+  /* Texte en gras */
+  color: var(--primary-color);
+  /* Couleur principale */
+  margin-bottom: 1rem;
+  /* Espacement sous le chiffre */
+}
+
+.figure-label {
+  color: var(--gray-600);
+  /* Couleur grise pour le label */
+  font-weight: 500;
+  /* Semi-gras */
+}
+
+/* ===== SECTION : Historique ===== */
+.history-section {
+  padding: 5rem 0;
+  /* Espacement vertical */
+  background-color: white;
+  /* Fond blanc */
+}
+
+.timeline {
+  max-width: 800px;
+  /* Largeur maximale */
+  margin: 3rem auto 0;
+  /* Centrage horizontal */
+  position: relative;
+  /* Pour positionner la ligne verticale */
+}
+
+.timeline::before {
+  content: "";
+  /* Élément décoratif */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 50px;
+  /* Décalage horizontal */
+  width: 4px;
+  background-color: var(--primary-light);
+  /* Couleur de ligne */
+  border-radius: var(--border-radius);
+  /* Arrondir les bords */
+}
+
+.timeline-item {
+  display: flex;
+  align-items: flex-start;
+  /* Alignement en haut */
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline-dot {
+  width: 16px;
+  height: 16px;
+  background-color: var(--primary-color);
+  /* Point sur la ligne */
+  border-radius: 50%;
+  /* Rond */
+  position: absolute;
+  left: 44px;
+  top: 5px;
+  z-index: 2;
+  /* Au-dessus de la ligne */
+}
+
+.timeline-date {
+  width: 80px;
+  font-weight: 700;
+  color: var(--primary-color);
+  margin-right: 1.5rem;
+  /* Espacement avec le contenu */
+}
+
+.timeline-content {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow-sm);
+  margin-left: 100px;
+  /* Décalage à droite de la ligne */
+  flex-grow: 1;
+  transition: all var(--transition-fast);
+}
+
+.timeline-item:hover .timeline-content {
+  transform: translateX(10px);
+  /* Décalage au survol */
+  box-shadow: var(--box-shadow);
+}
+
+.timeline-content h3 {
+  margin-bottom: 0.5rem;
+  color: var(--primary-color);
+}
+
+.timeline-content p {
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+/* ===== SECTION : Environnement - Bloc principal ===== */
+.env-section {
+  padding: 5rem 0;
+  background-color: white;
+}
+
+.env-culture-section {
+  background-color: var(--gray-100);
+}
+
+/* ===== Carte de contenu environnemental ===== */
+.env-card {
+  max-width: 800px;
+  margin: 0 auto;
+  /* Centrage horizontal */
+  display: flex;
+  align-items: flex-start;
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 2rem;
+  box-shadow: var(--box-shadow-sm);
+  transition: all var(--transition-fast);
+  margin-top: 3rem;
+}
+
+.env-card:hover {
+  transform: translateY(-10px);
+  /* Survol = élévation */
+  box-shadow: var(--box-shadow);
+  /* Ombre plus forte */
+}
+
+/* ===== Icône dans les cartes ===== */
+.env-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  /* Rond parfait */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1.5rem;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
+}
+
+.env-card:hover .env-icon {
+  background-color: var(--primary-color);
+  color: white;
+  transform: rotateY(180deg);
+  /* Rotation à 180° */
+}
+
+/* Contenu de la carte */
+.env-content {
+  flex-grow: 1;
+}
+
+/* ===== Liste environnementale ===== */
+.env-list {
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.env-list li {
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.env-list li:last-child {
+  margin-bottom: 0;
+}
+
+.env-list li i {
+  color: var(--primary-color);
+  /* Couleur des icônes */
+  margin-right: 0.75rem;
+}
+
+/* ===== Galerie d'images ===== */
+.env-media {
+  max-width: 800px;
+  margin: 2rem auto 0;
+}
+
+.env-image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.env-image {
+  position: relative;
+  height: 200px;
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow-sm);
+  transition: all var(--transition-fast);
+}
+
+.env-image:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow);
+}
+
+.env-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Redimensionne l'image proprement */
+  transition: transform var(--transition-medium);
+}
+
+.env-image:hover img {
+  transform: scale(1.1);
+  /* Zoom de l'image */
+}
+
+/* ===== Superposition sur image ===== */
+.env-image-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+  color: white;
+  transition: all var(--transition-fast);
+}
+
+.env-image-overlay h3 {
+  margin-bottom: 0;
+  font-size: 1.25rem;
+}
+
+/* ===== Grille de fonctionnalités environnementales ===== */
+.env-features {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.env-feature {
+  background-color: white;
+  border-radius: var(--border-radius);
+  padding: 1.5rem;
+  box-shadow: var(--box-shadow-sm);
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.env-feature:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--box-shadow);
+}
+
+.env-feature-icon {
+  width: 60px;
+  height: 60px;
+  background-color: var(--primary-light);
+  color: var(--primary-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 1.5rem;
+  transition: all var(--transition-fast);
+}
+
+.env-feature:hover .env-feature-icon {
+  background-color: var(--primary-color);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.env-feature h3 {
+  margin-bottom: 0.75rem;
+  transition: color var(--transition-fast);
+}
+
+.env-feature:hover h3 {
+  color: var(--primary-color);
+}
+
+.env-feature p {
+  color: var(--gray-600);
+  margin-bottom: 0;
+}
+
+/* ===== Statistiques durables (cercle) ===== */
+.sustainability-stats {
+  max-width: 800px;
+  margin: 2rem auto 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 2rem;
+}
+
+.sustainability-stat {
+  text-align: center;
+  transition: all var(--transition-fast);
+}
+
+.sustainability-stat:hover {
+  transform: translateY(-10px);
+}
+
+.stat-circle {
+  max-width: 150px;
+  margin: 0 auto 1rem;
+}
+
+.circular-chart {
+  display: block;
+  margin: 0 auto;
+  max-width: 150px;
+}
+
+/* Cercle de fond */
+.circle-bg {
+  fill: none;
+  stroke: var(--gray-200);
+  stroke-width: 2.8;
+}
+
+/* Cercle actif avec animation */
+.circle {
+  fill: none;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke: var(--primary-color);
+  animation: progress 1.5s ease-out forwards;
+}
+
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
+  }
+}
+
+/* Texte au centre du cercle */
+.percentage {
+  fill: var(--primary-color);
+  font-family: sans-serif;
+  font-size: 0.5em;
+  text-anchor: middle;
+  font-weight: bold;
+}
+
+.sustainability-stat p {
+  color: var(--gray-700);
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+/* ==================== STYLES RESPONSIVES POUR LES NOUVELLES PAGES ==================== */
+@media (max-width: 768px) {
+
+  /* Décale la ligne verticale de la timeline vers la gauche sur petit écran */
+  .timeline::before {
+    left: 20px;
+  }
+
+  /* Réduit la largeur du bloc de date */
+  .timeline-date {
+    width: 60px;
+  }
+
+  /* Réduit la marge du contenu pour s'adapter à l'écran */
+  .timeline-content {
+    margin-left: 70px;
+  }
+
+  /* Dispose les cartes environnementales en colonne au lieu de ligne */
+  .env-card {
+    flex-direction: column;
+  }
+
+  /* Réajuste l’icône environnementale pour l’adapter à la colonne */
+  .env-icon {
+    margin-right: 0;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Affiche les images environnementales en une seule colonne */
+  .env-image-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 576px) {
+
+  /* Passe toutes les grilles (info, caractéristiques, chiffres) en une colonne */
+  .info-grid,
+  .env-features,
+  .figures-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==================== PAGE DES ACTUALITÉS ==================== */
+
+/* Section globale pour les actualités */
+.news-section {
+  padding: 4rem 0;
+  background-color: #f8f9fa;
+  /* Couleur de fond claire */
+}
+
+/* Grille de cartes d'actualité responsive avec un espace de 2rem entre les cartes */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  /* colonnes adaptatives */
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+/* Style des cartes d’actualités */
+.news-card {
+  background-color: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  /* ombre douce */
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  /* animation smooth */
+  position: relative;
+  top: 0;
+}
+
+/* Effet de survol : la carte se soulève et s’agrandit légèrement */
+.news-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+/* Conteneur de l'image avec position relative pour superposer un effet */
+.news-image {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+}
+
+.news-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.8s ease, filter 0.5s ease;
+}
+
+/* Effet zoom sur l’image au survol de la carte */
+.news-card:hover .news-image img {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+/* Overlay sombre en dégradé sur l'image */
+.news-image::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.6));
+  opacity: 0.7;
+  transition: opacity 0.4s ease;
+}
+
+.news-card:hover .news-image::after {
+  opacity: 0.9;
+}
+
+/* Affichage de la date en haut à droite de l’image */
+.news-date {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  /* fond semi-transparent */
+  border-radius: 8px;
+  padding: 8px 12px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* Effet au survol : agrandissement et changement de couleur */
+.news-card:hover .news-date {
+  transform: scale(1.1);
+  background-color: var(--primary-color);
+  /* couleur principale personnalisée */
+  color: white;
+}
+
+/* ===== Style du texte de la date du jour ===== */
+.news-date .day {
+  display: block;
+  /* Affiche l’élément en bloc */
+  font-size: 1.5rem;
+  /* Taille de police de 1.5rem */
+  font-weight: 700;
+  /* Texte en gras */
+  line-height: 1;
+  /* Hauteur de ligne ajustée */
+}
+
+/* ===== Style du texte du mois ===== */
+.news-date .month {
+  display: block;
+  /* Affiche l’élément en bloc */
+  font-size: 0.9rem;
+  /* Taille réduite */
+  text-transform: uppercase;
+  /* Convertit en majuscules */
+  font-weight: 500;
+  /* Semi-gras */
+}
+
+/* ===== Contenu textuel de l'article ===== */
+.news-content {
+  padding: 1.5rem;
+  /* Ajoute du padding à l'intérieur */
+  position: relative;
+  /* Position relative pour ancrer les animations */
+}
+
+/* ===== Titre de l’article avec ligne animée ===== */
+.news-content h3 {
+  font-size: 1.25rem;
+  /* Taille du titre */
+  margin-bottom: 0.75rem;
+  /* Espacement inférieur */
+  font-weight: 600;
+  /* Texte en semi-gras */
+  color: #333;
+  /* Couleur du texte en gris foncé */
+  transition: color 0.3s ease;
+  /* Animation douce du changement de couleur */
+  position: relative;
+  /* Position nécessaire pour l'effet animé */
+  padding-bottom: 0.75rem;
+  /* Espacement sous le titre */
+}
+
+/* ===== Ligne sous le titre animée au survol ===== */
+.news-content h3::after {
+  content: '';
+  /* Ajout d’un contenu vide pour la décoration */
+  position: absolute;
+  /* Position absolue par rapport au titre */
+  bottom: 0;
+  /* Positionné en bas du titre */
+  left: 0;
+  /* Alignement à gauche */
+  width: 0;
+  /* Largeur initiale nulle */
+  height: 2px;
+  /* Épaisseur de la ligne */
+  background: linear-gradient(90deg, var(--primary-color), #9b59b6);
+  /* Dégradé coloré */
+  transition: width 0.4s ease;
+  /* Animation progressive */
+}
+
+/* ===== Effet au survol du titre ===== */
+.news-card:hover .news-content h3::after {
+  width: 50px;
+  /* La ligne s’allonge */
+}
+
+/* ===== Style du résumé de l’article ===== */
+.news-content p {
+  color: #666;
+  /* Couleur de texte en gris moyen */
+  margin-bottom: 1.25rem;
+  /* Espacement sous le paragraphe */
+  line-height: 1.6;
+  /* Amélioration de la lisibilité */
+}
+
+/* ===== Bouton "Lire la suite" stylisé ===== */
+.news-content .btn-text {
+  color: var(--primary-color);
+  /* Couleur principale */
+  font-weight: 500;
+  /* Semi-gras */
+  text-decoration: none;
+  /* Supprime le soulignement */
+  display: inline-flex;
+  /* Aligne les éléments */
+  align-items: center;
+  /* Centre verticalement */
+  transition: all 0.3s ease;
+  /* Animation fluide */
+  position: relative;
+  /* Nécessaire pour la ligne animée */
+}
+
+/* ===== Icône à droite du bouton avec effet au survol ===== */
+.news-content .btn-text i {
+  margin-left: 5px;
+  /* Espacement avec le texte */
+  transition: transform 0.3s ease;
+  /* Animation fluide */
+}
+
+/* ===== Effet de ligne sous le bouton au survol ===== */
+.news-content .btn-text::after {
+  content: '';
+  /* Élément décoratif */
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary-color);
+  transition: width 0.3s ease;
+}
+
+/* ===== Animation du bouton au survol ===== */
+.news-card:hover .news-content .btn-text {
+  color: var(--primary-dark);
+  /* Changement de couleur */
+}
+
+.news-card:hover .news-content .btn-text i {
+  transform: translateX(5px);
+  /* Déplacement horizontal */
+}
+
+.news-card:hover .news-content .btn-text::after {
+  width: 100%;
+  /* Ligne sous le bouton visible */
+}
+
+/* ===== Conteneur de la pagination ===== */
+.pagination {
+  display: flex;
+  /* Active Flexbox */
+  justify-content: center;
+  /* Centre horizontalement */
+  margin-top: 3rem;
+  /* Espacement en haut */
+  gap: 0.5rem;
+  /* Espacement entre les éléments */
+}
+
+/* ===== Style des boutons de page ===== */
+.page-link {
+  display: flex;
+  /* Active Flexbox */
+  align-items: center;
+  /* Centre verticalement */
+  justify-content: center;
+  /* Centre horizontalement */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* Forme circulaire */
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  /* Supprime le soulignement */
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  /* Ombre légère */
+}
+
+/* ===== Effet actif et au survol du bouton ===== */
+/* Change la couleur du fond et du texte, applique une légère élévation */
+.page-link:hover,
+.page-link.active {
+  background-color: var(--primary-color);
+  /* Change le fond en couleur primaire */
+  color: #fff;
+  /* Change la couleur du texte en blanc */
+  transform: translateY(-3px);
+  /* Déplace le bouton légèrement vers le haut */
+  /* Ajoute une ombre pour effet visuel */
+  box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* ===== Animation du bouton "suivant" ===== */
+/* Ajoute une animation de rebond lorsque le bouton est survolé */
+.page-link.next:hover i {
+  animation: bounce-right 0.6s ease infinite;
+}
+
+/* ===== Animation rebondissante ===== */
+/* Définit une animation où l’icône se déplace légèrement vers la droite */
+@keyframes bounce-right {
+
+  0%,
+  100% {
+    transform: translateX(0);
+    /* Position normale */
+  }
+
+  50% {
+    transform: translateX(3px);
+    /* Déplacement vers la droite */
+  }
+}
+
+/* ===== Animation du titre de la section ===== */
+/* Ajoute un effet sous le titre qui s’élargit lorsque visible */
+.news-section .section-header h2 {
+  position: relative;
+  display: inline-block;
+}
+
+/* Ligne décorative sous le titre */
+.news-section .section-header h2::before {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color), #9b59b6);
+  transition: width 0.8s ease;
+  /* Effet de transition */
+}
+
+/* Lorsque la section devient visible, la ligne s'affiche complètement */
+.news-section .section-header.visible h2::before {
+  width: 100%;
+}
+
+/* ===== Animation pour la bannière hero de la page actualités ===== */
+.page-hero {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  padding: 6rem 0;
+  /* Espacement vertical */
+  color: white;
+  /* Texte en blanc */
+  overflow: hidden;
+}
+
+/* ===== Animation 3D pour les cartes d'actualités ===== */
+/* Ajoute une perspective pour un effet en trois dimensions */
+.news-card {
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+/* Survol : translation légère et inclinaison */
+.news-card:hover {
+  transform: translateY(-10px) rotateX(5deg);
+}
+
+/* ===== Effet de brillance au survol ===== */
+/* Ajoute une lueur en diagonale */
+.news-image::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(to bottom right,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.3) 50%,
+      rgba(255, 255, 255, 0) 100%);
+  transform: rotate(30deg);
+  opacity: 0;
+  z-index: 2;
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Lorsque la carte est survolée, l’effet apparaît */
+.news-card:hover .news-image::before {
+  opacity: 1;
+  transform: rotate(30deg) translate(50%, -100%);
+}
+
+/* ===== Responsive design pour la page actualités ===== */
+/* Ajuste l'affichage des cartes en format mobile */
+@media (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: 1fr;
+    /* Une seule colonne */
+  }
+
+  .news-card {
+    max-width: 500px;
+    margin: 0 auto;
+    /* Centrage de la carte */
+  }
+}

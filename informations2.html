@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Déclaration de l'encodage des caractères et de la configuration de la vue -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <title>Informations clés</title>
+
+    <style>
+        /* Importation de la police Montserrat depuis Google Fonts */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
+        /* Déclaration des couleurs principales dans des variables CSS */
+        :root {
+            --primary-blue: #1467af;
+            /* Bleu principal */
+            --light-blue: #bbdefb;
+            /* Bleu clair */
+            --dark-blue: #053680;
+            /* Bleu foncé */
+            --text-blue: #110894;
+            /* Bleu pour le texte */
+            --white: #ffffff;
+            /* Blanc */
+            --light-gray: #f5f7fa;
+            /* Gris clair pour le fond */
+        }
+
+        /* Styles généraux de la page */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            /* Application de la police Montserrat */
+            background-color: var(--light-gray);
+            /* Fond gris clair */
+            color: var(--text-blue);
+            /* Couleur du texte bleu foncé */
+            margin: 0;
+            /* Retrait des marges par défaut */
+            padding: 0;
+            /* Retrait des espacements par défaut */
+            line-height: 1.6;
+            /* Augmentation de l'interligne pour une meilleure lisibilité */
+        }
+
+        /* Section principale contenant les informations */
+        #informations {
+            max-width: 1000px;
+            /* Largeur maximale de 1000px */
+            margin: 40px auto;
+            /* Marges automatiques pour centrer la section */
+            padding: 30px;
+            /* Espacement interne de 30px */
+            background: var(--white);
+            /* Fond blanc */
+            border-radius: 15px;
+            /* Bords arrondis */
+            box-shadow: 0 10px 30px rgba(2, 15, 255, 0.1);
+            /* Ombre portée */
+            overflow: hidden;
+            /* Cache tout ce qui dépasse */
+            position: relative;
+            /* Positionnement relatif pour le contenu pseudo-élément */
+        }
+
+        /* Effet de dégradé animé en haut de la section */
+        #informations::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--light-blue), var(--primary-blue), var(--dark-blue));
+            animation: gradient-flow 3s infinite linear;
+            /* Animation du dégradé */
+            background-size: 200% 100%;
+        }
+
+        /* Animation du dégradé pour créer un effet de mouvement */
+        @keyframes gradient-flow {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        /* Style des titres de niveau 2 (h2) */
+        h2 {
+            text-align: center;
+            /* Centrage du texte */
+            color: var(--primary-blue);
+            /* Couleur bleue */
+            font-size: 2.5rem;
+            /* Taille du texte */
+            margin-bottom: 40px;
+            /* Espacement en bas du titre */
+            position: relative;
+            padding-bottom: 15px;
+            /* Espace en bas du titre */
+        }
+
+        /* Effet de ligne sous le titre h2 */
+        h2::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background-color: var(--primary-blue);
+            border-radius: 2px;
+        }
+
+        /* Style des articles contenant les informations */
+        article {
+            margin-bottom: 40px;
+            /* Espacement sous chaque article */
+            padding: 25px;
+            /* Espacement interne de chaque article */
+            border-radius: 10px;
+            /* Bords arrondis */
+            background: var(--white);
+            /* Fond blanc */
+            box-shadow: 0 5px 15px rgba(7, 33, 237, 0.1);
+            /* Ombre portée */
+            border-left: 4px solid var(--primary-blue);
+            /* Bord gauche bleu */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Animation sur l'hover */
+            opacity: 0;
+            /* Initialisation de la visibilité */
+            transform: translateY(20px);
+            /* Positionnement initial */
+            animation: fade-in 0.6s forwards;
+            /* Animation d'apparition */
+        }
+
+        /* Effet lors du survol d'un article */
+        article:hover {
+            transform: translateY(-5px);
+            /* Déplacement vers le haut */
+            box-shadow: 0 8px 25px rgba(30, 136, 229, 0.2);
+            /* Ombre plus marquée */
+        }
+
+        /* Différé de l'animation d'apparition pour chaque article */
+        article:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        article:nth-child(2) {
+            animation-delay: 0.4s;
+        }
+
+        article:nth-child(3) {
+            animation-delay: 0.6s;
+        }
+
+        /* Animation d'apparition des articles */
+        @keyframes fade-in {
+            to {
+                opacity: 1;
+                /* Rendre visible */
+                transform: translateY(0);
+                /* Réinitialiser la position */
+            }
+        }
+
+        /* Style des titres de niveau 3 (h3) */
+        h3 {
+            color: var(--dark-blue);
+            /* Couleur bleue foncée */
+            font-size: 1.5rem;
+            /* Taille du texte */
+            margin-top: 0;
+            /* Retrait du marges supérieures */
+            display: inline-block;
+            /* Empêcher le saut de ligne */
+            position: relative;
+            /* Pour positionner la ligne sous le texte */
+        }
+
+        /* Effet de ligne sous le titre h3 lors du survol */
+        h3::before {
+            content: "";
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--primary-blue);
+            transition: width 0.3s ease;
+        }
+
+        article:hover h3::before {
+            width: 100%;
+            /* Étendre la ligne sous le titre lors du survol */
+        }
+
+        /* Style des paragraphes */
+        p {
+            margin: 15px 0;
+            /* Espacement autour du texte */
+            font-size: 1.1rem;
+            /* Taille du texte */
+            color: var(--text-blue);
+            /* Couleur du texte */
+        }
+
+        /* Style des listes non ordonnées */
+        ul {
+            list-style: none;
+            /* Retrait des puces de la liste */
+            padding: 0;
+            display: flex;
+            /* Disposition flexible */
+            flex-wrap: wrap;
+            /* Permet aux éléments de passer à la ligne suivante */
+            gap: 15px;
+            /* Espacement entre les éléments */
+        }
+
+        /* Style des éléments de la liste */
+        li {
+            background-color: rgba(30, 136, 229, 0.1);
+            /* Fond légèrement bleu */
+            padding: 10px 20px;
+            /* Espacement interne */
+            border-radius: 30px;
+            /* Bords arrondis */
+            border-left: 4px solid var(--primary-blue);
+            /* Bord gauche bleu */
+            transition: all 0.3s ease;
+            /* Transition fluide lors du survol */
+            opacity: 0;
+            /* Initialisation de la visibilité */
+            transform: scale(0.9);
+            /* Réduction de taille */
+            animation: scale-in 0.5s forwards;
+            /* Animation de mise en échelle */
+        }
+
+        /* Différé de l'animation pour chaque élément de la liste */
+        li:nth-child(1) {
+            animation-delay: 0.7s;
+        }
+
+        li:nth-child(2) {
+            animation-delay: 0.8s;
+        }
+
+        li:nth-child(3) {
+            animation-delay: 0.9s;
+        }
+
+        li:nth-child(4) {
+            animation-delay: 1s;
+        }
+
+        /* Animation d'agrandissement des éléments de la liste */
+        @keyframes scale-in {
+            to {
+                opacity: 1;
+                /* Rendre visible */
+                transform: scale(1);
+                /* Réinitialiser la taille */
+            }
+        }
+
+        /* Effet de survol des éléments de la liste */
+        li:hover {
+            background-color: rgba(30, 136, 229, 0.2);
+            /* Changement de fond */
+            transform: translateX(5px);
+            /* Déplacement vers la droite */
+        }
+
+        /* Adaptation pour les petits écrans */
+        @media (max-width: 768px) {
+            #informations {
+                margin: 20px;
+                /* Réduction des marges */
+                padding: 20px;
+                /* Réduction des espacements internes */
+            }
+
+            ul {
+                flex-direction: column;
+                /* Disposition des éléments de la liste en colonne */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Section principale contenant les informations -->
+    <section id="informations">
+        <h2>Informations clés</h2>
+
+        <!-- Article sur la mission -->
+        <article>
+            <h3>Mission</h3>
+            <p>Accélérer la transition vers une industrie intelligente, durable et résiliente en Europe et aux
+                États-Unis.</p>
+        </article>
+
+        <!-- Article sur la vision -->
+        <article>
+            <h3>Vision</h3>
+            <p>Devenir un leader mondial dans l'intégration de l'intelligence artificielle et des technologies vertes au
+                cœur des processus industriels.</p>
+        </article>
+
+        <!-- Article sur les partenaires stratégiques -->
+        <article>
+            <h3>Partenaires stratégiques</h3>
+            <ul>
+                <li>Siemens</li>
+                <li>Capgemini</li>
+                <li>General Electric</li>
+                <li>Schneider Electric</li>
+            </ul>
+        </article>
+    </section>
+</body>
+
+</html>

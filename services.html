@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Digital +</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Lien vers le fichier CSS externe -->
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles spécifiques pour les cartes de services */
+        .service-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background-color: white;
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            box-shadow: var(--box-shadow-sm);
+            transition: all var(--transition-fast);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--box-shadow);
+        }
+
+        .service-image-container {
+            width: 100%;
+            height: 180px;
+            margin-bottom: 1.5rem;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .service-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--transition-medium);
+        }
+
+        .service-card:hover .service-image {
+            transform: scale(1.1);
+        }
+
+        .service-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 86, 179, 0.2), rgba(0, 31, 63, 0.7));
+            opacity: 0;
+            transition: opacity var(--transition-fast);
+        }
+
+        .service-card:hover .service-overlay {
+            opacity: 1;
+        }
+
+        .service-icon {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            width: 60px;
+            height: 60px;
+            background-color: white;
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            transition: all var(--transition-fast);
+            z-index: 2;
+        }
+
+        .service-card:hover .service-icon {
+            transform: translate(-50%, -50%) scale(1);
+        }
+
+        .service-card h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+            transition: color var(--transition-fast);
+        }
+
+        .service-card:hover h3 {
+            color: var(--primary-color);
+        }
+
+        .service-card p {
+            color: var(--gray-600);
+            margin-bottom: 1.5rem;
+        }
+
+        .service-card .btn-text {
+            margin-top: auto;
+        }
+
+        /* Style pour la section hero */
+        .services-hero {
+            background-image: url("/PROJET_WEB2/services-hero.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Animation pour les icônes */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .service-icon i {
+            animation: pulse 2s infinite;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- En-tête -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu">
+        <div class="container">
+            <form action="#" class="mobile-search">
+                <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="mobile-nav-links">
+                <li><a href="industrie.html"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="active"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Bannière hero -->
+        <section class="page-hero services-hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Nos services</h1>
+                    <p>Des solutions sur mesure pour répondre à vos besoins</p>
+                </div>
+            </div>
+        </section>
+
+
+<!-- Section des Services -->
+<section class="services-section">
+    <div class="container">
+        <!-- En-tête de la section -->
+        <div class="section-header animate-on-scroll">
+            <h2>Nos services</h2>
+            <div class="section-divider"></div>
+            <p>Découvrez notre gamme complète de services technologiques conçus pour propulser votre entreprise vers
+                l'avenir</p>
+        </div>
+
+        <!-- Grille des services -->
+        <div class="services-grid">
+            <!-- Service 1: Cloud Computing -->
+            <div class="service-card animate-on-scroll" data-delay="0">
+                <div class="service-image-container">
+                    <!-- Image et icône du service -->
+                    <img src="Cloud Computing.png" alt="Cloud Computing" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-cloud"></i>
+                    </div>
+                </div>
+                <h3>Cloud Computing</h3>
+                <p>Solutions cloud évolutives et sécurisées pour stocker, gérer et traiter vos données à distance,
+                    optimisant ainsi votre infrastructure informatique.</p>
+                <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 2: Cybersécurité -->
+            <div class="service-card animate-on-scroll" data-delay="200">
+                <div class="service-image-container">
+                    <img src="Cybersécurité.png" alt="Cybersécurité" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                </div>
+                <h3>Cybersécurité</h3>
+                <p>Protection avancée contre les menaces numériques avec des solutions de sécurité robustes pour
+                    préserver l'intégrité de vos données et systèmes.</p>
+                <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 3: Analyse de données -->
+            <div class="service-card animate-on-scroll" data-delay="400">
+                <div class="service-image-container">
+                    <img src="Data & Analytics.png" alt="Analyse de données" class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                </div>
+                <h3>Analyse de données</h3>
+                <p>Exploitation des données industrielles pour optimiser les performances, anticiper les tendances et
+                    prendre des décisions stratégiques éclairées.</p>
+                <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+
+            <!-- Service 4: Automatisation industrielle -->
+            <div class="service-card animate-on-scroll" data-delay="600">
+                <div class="service-image-container">
+                    <img src="SmartFactory 4.0.jpg" alt="Automatisation industrielle"
+                        class="service-image">
+                    <div class="service-overlay"></div>
+                    <div class="service-icon">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                </div>
+                <h3>Automatisation industrielle</h3>
+                <p>Optimisation des processus de production grâce à l'automatisation et la robotique avancée pour une
+                    efficacité et une productivité accrues.</p>
+                <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section CTA (Call To Action) -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content animate-on-scroll">
+            <h2>Besoin d'une solution personnalisée?</h2>
+            <p>Nos experts sont à votre disposition pour étudier vos besoins et vous proposer des services adaptés à
+                votre secteur d'activité.</p>
+            <!-- Bouton CTA pour contacter -->
+            <a href="contact.html" class="btn btn-primary">
+                Contactez-nous
+                <i class="fas fa-arrow-right"></i>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Pied de page -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Section 1: Informations sur l'entreprise -->
+            <div class="footer-section">
+                <h3>Digital +</h3>
+                <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.</p>
+                <!-- Liens vers les réseaux sociaux -->
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 2: Liens rapides -->
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                    <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                    <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                    <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                    <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                    <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Informations de contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation<br>75001 Paris, France</span>
+                    </li>
+                <li>
+                    <i class="fas fa-phone"></i>
+                    <span>+212 6 00 00 00 00</span>
+                </li>
+                <li>
+                    <i class="fas fa-envelope"></i>
+                    <span>Digitalplus@gmail.com</span>
+                </li>
+                </ul>
+            </div>
+
+            <!-- Section 4: Formulaire d'inscription à la newsletter -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" class="newsletter-input">
+                    <button type="submit" class="newsletter-button">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section du bas du pied de page -->
+        <div class="footer-bottom">
+            <p>© Digital + 2025. Tous droits réservés.</p>
+            <ul class="footer-bottom-links">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Conditions</a></li>
+                <li><a href="#">Plan du site</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Inclusion du script JavaScript -->
+<script src="script.js"></script>
+</body>
+
+</html>

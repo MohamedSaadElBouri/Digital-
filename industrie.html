@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Définition de l'encodage des caractères et de la mise en page adaptative -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Industrie - Digital +</title>
+
+    <!-- Lien vers le fichier CSS externe -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Lien vers Font Awesome pour les icônes dans le site -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Lien vers Google Fonts pour la police 'Inter' utilisée dans le site -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Styles spécifiques pour uniformiser les images des études de cas */
+        .case-study-image {
+            height: 250px;
+            overflow: hidden;
+            /* Cache les parties de l'image qui débordent */
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            /* Ombre légère autour des images */
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* Permet de couvrir toute la zone sans déformer l'image */
+            object-position: center;
+            /* Centre l'image dans la zone */
+            transition: transform 0.3s ease;
+            /* Animation douce lors du survol */
+        }
+
+        .case-study-card:hover .case-study-image img {
+            transform: scale(1.05);
+            /* Agrandit légèrement l'image lors du survol */
+        }
+
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            /* Crée une grille responsive */
+            gap: 30px;
+            /* Espace entre les éléments */
+            margin-bottom: 40px;
+        }
+
+        .case-study-card {
+            background-color: #fff;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            /* Ombre autour des cartes */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            /* Animation pour les transformations */
+        }
+
+        .case-study-card:hover {
+            transform: translateY(-5px);
+            /* Déplace légèrement la carte vers le haut au survol */
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            /* Augmente l'ombre au survol */
+        }
+
+        .case-study-content {
+            padding: 20px;
+            /* Ajoute de l'espace autour du contenu des cartes */
+        }
+
+        .case-study-content h3 {
+            margin-top: 0;
+            /* Enlève la marge en haut des titres */
+            color: #333;
+            font-size: 1.4rem;
+            /* Taille du texte pour les titres */
+        }
+
+        .case-study-client {
+            color: #666;
+            font-style: italic;
+            /* Style italique pour le nom du client */
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- En-tête du site -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<!-- Menu mobile -->
+<div class="mobile-menu">
+    <div class="container">
+        <form action="#" class="mobile-search">
+            <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+            <button type="submit" class="mobile-search-button">
+                <i class="fas fa-search"></i>
+            </button>
+        </form>
+        <ul class="mobile-nav-links">
+            <li><a href="industrie.html" class="active"><i class="fas fa-industry"></i> Industrie</a></li>
+            <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+            <li><a href="carriere.html"><i class="fas fa-users"></i> Carrière</a></li>
+            <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+            <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+            <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+            <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+        </ul>
+    </div>
+</div>
+
+<!-- Contenu principal -->
+<main>
+    <!-- Bannière hero -->
+    <section class="page-hero industrie-hero">
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content animate-fade-in">
+                <h1>Notre expertise industrielle</h1>
+                <p>Solutions innovantes pour l'industrie manufacturière</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Secteurs industriels -->
+    <section class="industry-sectors">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Nos secteurs d'activité</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="sectors-grid">
+                <!-- Secteur 1 -->
+                <div class="sector-card animate-on-scroll" data-delay="0">
+                    <div class="sector-icon">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <h3>Électronique</h3>
+                    <p>Conception et fabrication de composants électroniques de pointe pour diverses applications
+                        industrielles.</p>
+                    <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Secteur 2 -->
+                <div class="sector-card animate-on-scroll" data-delay="200">
+                    <div class="sector-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>Automobile</h3>
+                    <p>Solutions innovantes pour l'industrie automobile, de la conception à la production en série.
+                    </p>
+                    <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Secteur 3 -->
+                <div class="sector-card animate-on-scroll" data-delay="400">
+                    <div class="sector-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Chimie</h3>
+                    <p>Développement de procédés chimiques durables et respectueux de l'environnement.</p>
+                    <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <!-- Secteur 4 -->
+                <div class="sector-card animate-on-scroll" data-delay="600">
+                    <div class="sector-icon">
+                        <i class="fas fa-cog"></i>
+                    </div>
+                    <h3>Mécanique</h3>
+                    <p>Conception et fabrication de systèmes mécaniques de précision pour l'industrie.</p>
+                    <a href="#" class="btn-text">En savoir plus <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Processus industriel -->
+    <section class="process-section">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Notre processus industriel</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="process-timeline">
+                <!-- Étape 1 -->
+                <div class="process-step animate-on-scroll" data-delay="0">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Analyse des besoins</h3>
+                        <p>Étude approfondie des besoins spécifiques de votre entreprise et de votre secteur
+                            d'activité.</p>
+                    </div>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="process-step animate-on-scroll" data-delay="200">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Conception</h3>
+                        <p>Élaboration de solutions sur mesure adaptées à vos contraintes techniques et économiques.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="process-step animate-on-scroll" data-delay="400">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Prototypage</h3>
+                        <p>Création de prototypes fonctionnels pour valider les concepts et optimiser les
+                            performances.</p>
+                    </div>
+                </div>
+
+                <!-- Étape 4 -->
+                <div class="process-step animate-on-scroll" data-delay="600">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Production</h3>
+                        <p>Mise en œuvre des solutions à l'échelle industrielle avec un contrôle qualité rigoureux.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Étape 5 -->
+                <div class="process-step animate-on-scroll" data-delay="800">
+                    <div class="step-number">5</div>
+                    <div class="step-content">
+                        <h3>Suivi et maintenance</h3>
+                        <p>Accompagnement continu pour garantir la performance et la durabilité de nos solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Études de cas - Section unifiée -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header animate-on-scroll">
+                <h2>Nos réalisations industrielles</h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="case-studies-grid">
+                <!-- Étude de cas 1 -->
+                <div class="case-study-card animate-on-scroll" data-delay="0">
+                    <div class="case-study-image">
+                        <img src="SmartFactory 4.0.jpg" alt="Usine automatisée">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Automatisation d'une usine de production</h3>
+                        <p class="case-study-client">Client: Groupe Industriel Français</p>
+                        <p>Mise en place d'un système d'automatisation complet permettant d'augmenter la
+                            productivité de 35%.</p>
+                        <a href="#" class="btn-text">Voir l'étude de cas <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Étude de cas 2 -->
+                <div class="case-study-card animate-on-scroll" data-delay="200">
+                    <div class="case-study-image">
+                        <img src="Santé & Pharmaceutique.png" alt="Santé et pharmaceutique">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Santé & pharmaceutique</h3>
+                        <p class="case-study-client">Client: Laboratoire Pharmaceutique</p>
+                        <p>Nos solutions numériques permettent aux acteurs du secteur médical de sécuriser les
+                            données des patients, améliorer la
+                            traçabilité des produits et digitaliser les soins.</p>
+                        <a href="#" class="btn-text">Voir l'étude de cas <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Étude de cas 3 -->
+                <div class="case-study-card animate-on-scroll" data-delay="400">
+                    <div class="case-study-image">
+                        <img src="INDUSTRIE ET FABRICATION _PROJET_WEB.png" alt="Industrie et fabrication">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Industrie & Fabrication</h3>
+                        <p class="case-study-client">Client: Entreprise Manufacturière</p>
+                        <p>Nous aidons les entreprises manufacturières à moderniser leurs processus grâce à
+                            l'automatisation, l'IoT et les
+                            solutions intelligentes pour une production plus efficace et durable.</p>
+                        <a href="#" class="btn-text">Voir l'étude de cas <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Étude de cas 4 -->
+                <div class="case-study-card animate-on-scroll" data-delay="600">
+                    <div class="case-study-image">
+                        <img src="Commerce & Distribution.png" alt="Commerce et distribution">
+                    </div>
+                    <div class="case-study-content">
+                        <h3>Commerce & Distribution</h3>
+                        <p class="case-study-client">Client: Chaîne de Distribution</p>
+                        <p>Du e-commerce aux systèmes de gestion des stocks, nous accompagnons les enseignes dans la
+                            digitalisation de leurs
+                            opérations pour une expérience client fluide et personnalisée.</p>
+                        <a href="#" class="btn-text">Voir l'étude de cas <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll">
+                <h2>Prêt à transformer votre industrie?</h2>
+                <p>Contactez nos experts pour discuter de vos projets industriels et découvrir comment nous pouvons
+                    vous aider à atteindre vos objectifs.</p>
+                <a href="contact.html" class="btn btn-primary">
+                    Demander un devis gratuit
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+</main>
+
+<!-- Pied de page -->
+<footer class="footer">
+    <div class="container">
+        <!-- Contenu du pied de page -->
+        <div class="footer-content">
+
+            <!-- Section 1: Information sur l'entreprise -->
+            <div class="footer-section">
+                <h3>Digital +</h3>
+                <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.</p>
+                <!-- Liens vers les réseaux sociaux -->
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Section 2: Liens rapides vers les pages du site -->
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                    <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                    <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                    <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                    <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                    <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Section 3: Informations de contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation<br>75001 Paris, France</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+33 1 23 45 67 89</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>contact@Digital +.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Section 4: Formulaire d'inscription à la newsletter -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Votre email" class="newsletter-input">
+                    <button type="submit" class="newsletter-button">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section inférieure du pied de page -->
+        <div class="footer-bottom">
+            <p>© Digital + 2025. Tous droits réservés.</p>
+            <ul class="footer-bottom-links">
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Conditions</a></li>
+                <li><a href="#">Plan du site</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+
+</html>

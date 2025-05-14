@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - Digital +</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- En-tête -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu">
+        <div class="container">
+            <form action="#" class="mobile-search">
+                <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="mobile-nav-links">
+                <li><a href="industrie.html"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="active"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Bannière hero -->
+        <section class="page-hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>À propos de Digital +</h1>
+                    <p>Découvrez notre histoire, notre mission et nos valeurs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notre histoire -->
+        <section class="about-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Notre histoire</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="about-content animate-on-scroll">
+                    <p class="lead-text">
+                        Fondée en <strong>2023</strong>, <strong>Digital +</strong> est une entreprise marocaine
+                        spécialisée dans le développement de solutions numériques innovantes. L'idée est née de la
+                        volonté de jeunes passionnés par la technologie de créer une structure capable de répondre aux
+                        besoins des particuliers, des professionnels et des étudiants dans le domaine du digital.
+                    </p>
+                    <p>
+                        Depuis sa création, <strong>Digital +</strong> s'est donné pour mission de rendre la technologie
+                        <strong>accessible, utile et évolutive</strong>, à travers des services modernes et adaptés à
+                        chaque projet.
+                    </p>
+                    <p>
+                        Tout a commencé avec un petit groupe de développeurs qui partageaient une vision commune : créer
+                        une entreprise qui allie <strong>créativité</strong>, <strong>performance</strong>, et
+                        <strong>valeurs humaines</strong>. Au fil des mois, <strong>Digital +</strong> a évolué pour
+                        devenir un acteur local de confiance dans le secteur du développement informatique.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Notre mission et vision -->
+        <section class="mission-section">
+            <div class="container">
+                <div class="mission-grid">
+                    <div class="mission-card animate-on-scroll">
+                        <div class="mission-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Notre mission</h3>
+                        <p>Accélérer la transition vers une industrie intelligente, durable et résiliente en Europe et
+                            aux États-Unis.</p>
+                    </div>
+
+                    <div class="mission-card animate-on-scroll" data-delay="200">
+                        <div class="mission-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Notre vision</h3>
+                        <p>Devenir un leader mondial dans l'intégration de l'intelligence artificielle et des
+                            technologies vertes au cœur des processus industriels.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+<section class="history-section">
+    <div class="container">
+    
+        <div class="timeline">
+            <div class="timeline-item animate-on-scroll" data-delay="0">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Création de Digital +</h3>
+                    <p>Fondation de l'entreprise par un groupe d'experts en industrie 4.0.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll" data-delay="200">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2023</div>
+                <div class="timeline-content">
+                    <h3>Premiers partenariats stratégiques</h3>
+                    <p>Signature d'accords avec des leaders industriels européens.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll" data-delay="400">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2024</div>
+                <div class="timeline-content">
+                    <h3>Expansion internationale</h3>
+                    <p>Ouverture des premiers bureaux aux États-Unis et en Allemagne.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item animate-on-scroll" data-delay="600">
+                <div class="timeline-dot"></div>
+                <div class="timeline-date">2025</div>
+                <div class="timeline-content">
+                    <h3>Aujourd'hui</h3>
+                    <p>Leader dans la réindustrialisation de l'Europe et des États-Unis.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+        <!-- Où nous trouver -->
+        <section class="location-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Où nous trouver</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="location-content animate-on-scroll">
+                    <div class="location-details">
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="location-text">
+                                <h3>Adresse</h3>
+                                <p>Rue Al Qods, Quartier Administratif, Agadir, Maroc</p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="location-text">
+                                <h3>Téléphone</h3>
+                                <p><a href="tel:+212600000000">+212 6 00 00 00 00</a></p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="location-text">
+                                <h3>Email</h3>
+                                <p><a href="mailto:contact@19tech.ma">contact@19tech.ma</a></p>
+                            </div>
+                        </div>
+
+                        <div class="location-item">
+                            <div class="location-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div class="location-text">
+                                <h3>LinkedIn</h3>
+                                <p><a href="https://www.linkedin.com/company/19tech/about/" target="_blank">Suivez-nous
+                                        sur LinkedIn</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="location-map">
+                        <!-- COMMENT: Ajouter la carte Google Maps -->
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3441.1076928526396!2d-9.598704684887305!3d30.42128198175033!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb3b6e9daad02d7%3A0x4c58f7106cda91a5!2sQuartier%20Administratif%2C%20Agadir%2080000!5e0!3m2!1sfr!2sma!4v1623456789012!5m2!1sfr!2sma"
+                            width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content animate-on-scroll">
+                    <h2>Envie d'en savoir plus ?</h2>
+                    <p>N'hésitez pas à nous contacter pour discuter de vos projets ou pour toute question.</p>
+                    <a href="contact.html" class="btn btn-primary">
+                        Contactez-nous
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Digital +</h3>
+                    <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                        <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                        <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                        <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                        <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                        <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                        <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Avenue de l'Innovation<br>75001 Paris, France</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+212 6 00 00 00 00</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>Digitalplus@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" class="newsletter-input">
+                        <button type="submit" class="newsletter-button">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Digital + 2025. Tous droits réservés.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Conditions</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

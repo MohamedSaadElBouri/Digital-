@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="fr">
+<!-- Déclaration de la langue de la page comme le français -->
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Définit l'encodage des caractères en UTF-8 pour garantir que les caractères spéciaux comme les accents sont affichés correctement -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Cette ligne garantit que la mise en page sera adaptée aux appareils mobiles avec un zoom initial de 1.0 (taille par défaut) -->
+
+    <title>Carrière - Digital +</title>
+    <!-- Le titre de la page qui apparaît dans l'onglet du navigateur -->
+
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien vers le fichier CSS externe qui contient les styles de la page -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers la bibliothèque Font Awesome pour les icônes utilisées sur la page -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Lien vers Google Fonts pour intégrer la police "Inter" à la page -->
+</head>
+
+<body>
+    <!-- Le corps de la page, contenant tout le contenu visible -->
+
+    <!-- En-tête -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+    <!-- Menu mobile (pour les appareils mobiles) -->
+    <div class="mobile-menu">
+        <div class="container">
+            <form action="#" class="mobile-search">
+                <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <!-- Liens du menu mobile -->
+            <ul class="mobile-nav-links">
+                <li><a href="industrie.html"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="active"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Bannière Hero -->
+        <section class="page-hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Rejoignez l'Aventure 19 Tech</h1>
+                    <p>Développez votre carrière dans un environnement innovant et dynamique</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section "Grandir avec nous" -->
+        <section class="career-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Grandir avec nous</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="career-content animate-on-scroll">
+                    <p class="lead-text">
+                        Chez 19 Tech, nous croyons que l'innovation commence par les personnes. Nous investissons dans
+                        la formation continue, l'accompagnement et le développement des compétences de chaque
+                        collaborateur.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Une culture collaborative -->
+        <section class="culture-section">
+            <div class="container">
+                <div class="culture-grid">
+                    <div class="culture-content animate-on-scroll">
+                        <h2>Une culture collaborative</h2>
+                        <p>
+                            Travailler chez 19 Tech, c'est faire partie d'une équipe soudée, ouverte et dynamique. Nous
+                            valorisons l'échange, l'écoute, la diversité des idées et l'esprit d'initiative.
+                        </p>
+                    </div>
+                    <div class="culture-image animate-on-scroll" data-delay="200">
+                        <!-- COMMENT: Ajouter l'image de la culture collaborative -->
+                        <img src="Une culture collaborative.png" alt="Collaboration en entreprise"
+                            class="rounded-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Des projets qui comptent -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-grid">
+                   
+                    <div class="projects-content animate-on-scroll" data-delay="200">
+                        <h2>Des projets qui comptent</h2>
+                        <p>
+                            Nos équipes interviennent sur des projets innovants dans les domaines de la santé, de
+                            l'énergie, du e-commerce, de l'industrie et bien plus encore. Chaque mission est une
+                            opportunité de faire la différence.
+                        </p>
+                        <div class="projects-image animate-on-scroll">
+                            <!-- COMMENT: Ajouter l'image des projets -->
+                            <img src="Env_Travail.png" alt="Discussion en équipe" class="rounded-image">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profils recherchés -->
+        <section class="profiles-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Profils recherchés</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <div class="profiles-content animate-on-scroll">
+                    <p class="lead-text">Nous sommes toujours à la recherche de talents passionnés :</p>
+
+                    <div class="profiles-grid">
+                        <div class="profile-card">
+                            <div class="profile-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Développeurs</h3>
+                            <p>Front-end, Back-end, Full-Stack</p>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <h3>Experts cloud & DevOps</h3>
+                            <p>AWS, Azure, Google Cloud</p>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-icon">
+                                <i class="fas fa-shield-alt"></i>
+                            </div>
+                            <h3>Ingénieurs en cybersécurité</h3>
+                            <p>Sécurité des systèmes et réseaux</p>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-icon">
+                                <i class="fas fa-tasks"></i>
+                            </div>
+                            <h3>Chefs de projet IT</h3>
+                            <p>Gestion de projets technologiques</p>
+                        </div>
+
+                        <div class="profile-card">
+                            <div class="profile-icon">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h3>Data analysts / Data scientists</h3>
+                            <p>Analyse et science des données</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+<br>
+        <!-- Postulez -->
+        <section class="apply-section">
+            <div class="container">
+                <div class="apply-card animate-on-scroll">
+                    <h2>Postulez dès maintenant</h2>
+                    <p>
+                        Envoyez votre CV et lettre de motivation à :
+                        <a href="mailto:recrutement@19tech.com" class="email-link">recrutement@19tech.com</a>
+                    </p>
+                    <p>
+                        Ou découvrez nos offres disponibles sur notre page <a href="https://linkedin.com"
+                            target="_blank" class="linkedin-link">LinkedIn</a>.
+                    </p>
+                    <div class="apply-buttons">
+                        <a href="contact.html" class="btn btn-primary">
+                            Nous contacter
+                            <i class="fas fa-arrow-right"></i>
+                        </a>
+                        <a href="#" class="btn btn-outline">
+                            Voir les offres
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<br>
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Digital +</h3>
+                    <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                        <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                        <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                        <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                        <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                        <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                        <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Avenue de l'Innovation<br>75001 Paris, France</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+212 6 00 00 00 00</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>Digitalplus@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" class="newsletter-input">
+                        <button type="submit" class="newsletter-button">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Digital + 2025. Tous droits réservés.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Conditions</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

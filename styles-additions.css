@@ -1,0 +1,613 @@
+/* ===== Styles de la section SOLUTIONS ===== */
+.solutions-section {
+    padding: 5rem 0;
+    /* Ajoute un espace autour de la section */
+    background-color: white;
+    /* Fond blanc */
+}
+
+/* ===== Grille pour afficher les solutions ===== */
+.solutions-grid {
+    display: grid;
+    /* Active la grille CSS */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Colonnes flexibles */
+    gap: 2rem;
+    /* Espacement entre les éléments */
+    margin-top: 3rem;
+    /* Espacement supérieur */
+}
+
+/* ===== Carte individuelle des solutions ===== */
+.solution-card {
+    background-color: white;
+    /* Fond blanc */
+    border-radius: var(--border-radius);
+    /* Bord arrondi */
+    padding: 2rem;
+    /* Espacement intérieur */
+    box-shadow: var(--box-shadow-sm);
+    /* Ombre légère */
+    transition: all var(--transition-fast);
+    /* Animation fluide */
+    display: flex;
+    /* Active le modèle flexible */
+    flex-direction: column;
+    /* Alignement vertical */
+    align-items: center;
+    /* Centre les éléments */
+    text-align: center;
+    /* Texte centré */
+}
+
+/* Effet au survol : élévation et ombre accentuée */
+.solution-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--box-shadow);
+}
+
+/* ===== Icône de la solution ===== */
+.solution-icon {
+    width: 80px;
+    /* Taille de l’icône */
+    height: 80px;
+    background-color: var(--primary-light);
+    /* Couleur de fond */
+    color: var(--primary-color);
+    /* Couleur du texte */
+    border-radius: 50%;
+    /* Forme circulaire */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    /* Espacement */
+    font-size: 2rem;
+    /* Taille de police */
+    transition: all var(--transition-fast);
+    /* Animation fluide */
+}
+
+/* Effet au survol : rotation et changement de couleur */
+.solution-card:hover .solution-icon {
+    background-color: var(--primary-color);
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* ===== Titre de la solution ===== */
+.solution-card h3 {
+    margin-bottom: 1rem;
+    transition: color var(--transition-fast);
+    /* Animation fluide du changement de couleur */
+}
+
+/* Effet au survol : Changement de couleur */
+.solution-card:hover h3 {
+    color: var(--primary-color);
+}
+
+/* ===== Texte descriptif ===== */
+.solution-card p {
+    color: var(--gray-600);
+    /* Couleur grise */
+    margin-bottom: 1.5rem;
+}
+
+/* ===== Grille des informations ===== */
+.info-grid {
+    display: grid;
+    /* Active la grille */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Colonnes adaptables */
+    gap: 2rem;
+    /* Espacement */
+    margin-top: 3rem;
+    /* Espacement supérieur */
+}
+
+/* ===== Carte individuelle des informations ===== */
+.info-card {
+    background-color: white;
+    /* Définit un fond blanc */
+    border-radius: var(--border-radius);
+    /* Arrondit les coins selon une variable CSS */
+    padding: 2rem;
+    /* Ajoute un espacement interne de 2 rem */
+    box-shadow: var(--box-shadow-sm);
+    /* Applique une ombre légère */
+    transition: all var(--transition-fast);
+    /* Ajoute une transition fluide */
+    height: 100%;
+    /* Permet d'occuper toute la hauteur disponible */
+}
+
+/* Effet au survol : élévation et ombre accentuée */
+.info-card:hover {
+    transform: translateY(-10px);
+    /* Déplace la carte vers le haut pour un effet dynamique */
+    box-shadow: var(--box-shadow);
+    /* Augmente l'ombre pour un effet de survol */
+}
+
+/* ===== Icône des informations ===== */
+.info-icon {
+    width: 60px;
+    /* Définit une largeur de 60px */
+    height: 60px;
+    /* Définit une hauteur de 60px */
+    background-color: var(--primary-light);
+    /* Applique une couleur de fond plus claire */
+    color: var(--primary-color);
+    /* Applique la couleur principale au texte */
+    border-radius: 50%;
+    /* Rend l’icône circulaire */
+    display: flex;
+    /* Active le modèle flexbox pour centrer le contenu */
+    align-items: center;
+    /* Centre verticalement le contenu */
+    justify-content: center;
+    /* Centre horizontalement le contenu */
+    margin-bottom: 1.5rem;
+    /* Ajoute un espacement sous l’icône */
+    font-size: 1.5rem;
+    /* Définit une taille de police plus grande */
+    transition: all var(--transition-fast);
+    /* Applique une transition fluide */
+}
+
+/* Effet au survol : Rotation et changement de couleur */
+.info-card:hover .info-icon {
+    background-color: var(--primary-color);
+    /* Change la couleur de fond en couleur principale */
+    color: white;
+    /* Change la couleur du texte en blanc */
+    transform: rotateY(180deg);
+    /* Effectue une rotation horizontale */
+}
+
+/* ===== Informations clés (Liste des partenaires) ===== */
+.partner-list {
+    padding-left: 0;
+    /* Supprime le padding gauche */
+}
+
+.partner-list li {
+    margin-bottom: 0.5rem;
+    /* Ajoute un petit espacement entre les éléments */
+    display: flex;
+    /* Utilise Flexbox pour aligner les éléments */
+    align-items: center;
+    /* Centre verticalement le texte et l'icône */
+}
+
+.partner-list li i {
+    color: var(--primary-color);
+    /* Applique la couleur principale à l'icône */
+    margin-right: 0.5rem;
+    /* Ajoute un espacement entre l'icône et le texte */
+}
+
+/* ===== Grille des chiffres clés ===== */
+.figures-grid {
+    display: grid;
+    /* Active le modèle de grille */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colonnes adaptatives */
+    gap: 2rem;
+    /* Ajoute un espace entre les éléments */
+    margin-top: 3rem;
+    /* Ajoute un espacement en haut */
+}
+
+/* ===== Carte individuelle des chiffres clés ===== */
+.figure-card {
+    background-color: white;
+    /* Fond blanc */
+    border-radius: var(--border-radius);
+    /* Coins arrondis */
+    padding: 2rem;
+    /* Ajoute un espacement interne */
+    box-shadow: var(--box-shadow-sm);
+    /* Ombre légère */
+    transition: all var(--transition-fast);
+    /* Animation fluide */
+    text-align: center;
+    /* Centre le texte */
+}
+
+/* Effet au survol : élévation et ombre accentuée */
+.figure-card:hover {
+    transform: translateY(-10px);
+    /* Déplace la carte vers le haut au survol */
+    box-shadow: var(--box-shadow);
+    /* Augmente l’ombre pour donner de la profondeur */
+}
+
+/* ===== Valeur numérique des chiffres clés ===== */
+.figure-number {
+    font-size: 2.5rem;
+    /* Définit une taille de texte plus grande */
+    font-weight: 700;
+    /* Met le texte en gras */
+    color: var(--primary-color);
+    /* Utilise la couleur principale */
+    margin-bottom: 1rem;
+    /* Ajoute un espacement en bas */
+}
+
+/* ===== Libellé des chiffres clés ===== */
+.figure-label {
+    color: var(--gray-600);
+    /* Applique une couleur grise */
+    font-weight: 500;
+    /* Augmente la graisse du texte */
+}
+
+/* ===== Section historique ===== */
+.timeline {
+    max-width: 800px;
+    /* Définit une largeur maximale */
+    margin: 3rem auto 0;
+    /* Centre la section et ajoute un espacement en haut */
+    position: relative;
+    /* Nécessaire pour les animations internes */
+}
+
+/* Ligne verticale de la timeline */
+.timeline::before {
+    content: "";
+    /* Élément décoratif sans contenu visible */
+    position: absolute;
+    /* Position fixe */
+    top: 0;
+    bottom: 0;
+    left: 50px;
+    /* Positionné légèrement à gauche */
+    width: 4px;
+    /* Définition de la largeur */
+    background-color: var(--primary-light);
+    /* Couleur de fond */
+    border-radius: var(--border-radius);
+    /* Bord arrondi */
+}
+
+/* Élément individuel de la timeline */
+.timeline-item {
+    display: flex;
+    /* Utilisation de Flexbox */
+    align-items: flex-start;
+    /* Alignement en haut */
+    margin-bottom: 2rem;
+    /* Espacement entre les éléments */
+    position: relative;
+    /* Nécessaire pour les animations */
+}
+
+/* Point de la timeline */
+.timeline-dot {
+    width: 16px;
+    /* Définition de la largeur */
+    height: 16px;
+    /* Définition de la hauteur */
+    background-color: var(--primary-color);
+    /* Couleur principale */
+    border-radius: 50%;
+    /* Rend le point circulaire */
+    position: absolute;
+    /* Position absolue */
+    left: 44px;
+    /* Alignement à gauche */
+    top: 5px;
+    /* Alignement en haut */
+    z-index: 2;
+    /* Assure que l’élément est au-dessus */
+}
+
+/* ===== Effet au survol pour les éléments de la timeline ===== */
+.timeline-item:hover .timeline-content {
+    transform: translateX(10px);
+    /* Déplace le contenu vers la droite */
+    box-shadow: var(--box-shadow);
+    /* Augmente l'ombre */
+}
+
+/* ===== Section environnement ===== */
+.env-section {
+    padding: 5rem 0;
+    /* Ajoute un espacement vertical */
+    background-color: white;
+    /* Fond blanc */
+}
+
+/* ===== Carte de présentation de l’environnement ===== */
+.env-card {
+    max-width: 800px;
+    /* Largeur maximale */
+    margin: 0 auto;
+    /* Centre la carte */
+    display: flex;
+    /* Active Flexbox */
+    align-items: flex-start;
+    /* Alignement en haut */
+    background-color: white;
+    /* Fond blanc */
+    border-radius: var(--border-radius);
+    /* Coins arrondis */
+    padding: 2rem;
+    /* Espacement interne */
+    box-shadow: var(--box-shadow-sm);
+    /* Ombre légère */
+    transition: all var(--transition-fast);
+    /* Animation fluide */
+    margin-top: 3rem;
+    /* Espacement en haut */
+}
+
+/* Effet au survol : déplacement et ombre accentuée */
+.env-card:hover {
+    transform: translateY(-10px);
+    /* Déplacement vers le haut */
+    box-shadow: var(--box-shadow);
+    /* Augmente l'ombre */
+}
+/* ===== Grille des fonctionnalités environnementales ===== */
+.env-features {
+    max-width: 800px;
+    /* Définit une largeur maximale */
+    margin: 2rem auto 0;
+    /* Centre la section et ajoute un espacement en haut */
+    display: grid;
+    /* Active la grille CSS */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    /* Colonnes adaptatives */
+    gap: 2rem;
+    /* Espacement entre les éléments */
+}
+
+/* ===== Carte individuelle des fonctionnalités ===== */
+.env-feature {
+    background-color: white;
+    /* Définit un fond blanc */
+    border-radius: var(--border-radius);
+    /* Arrondit les coins */
+    padding: 1.5rem;
+    /* Espacement interne */
+    box-shadow: var(--box-shadow-sm);
+    /* Ombre légère */
+    text-align: center;
+    /* Centre le texte */
+    transition: all var(--transition-fast);
+    /* Ajoute une transition fluide */
+}
+
+/* Effet au survol : élévation et ombre accentuée */
+.env-feature:hover {
+    transform: translateY(-10px);
+    /* Déplace la carte vers le haut */
+    box-shadow: var(--box-shadow);
+    /* Augmente l'ombre */
+}
+
+/* ===== Icône de la fonctionnalité environnementale ===== */
+.env-feature-icon {
+    width: 60px;
+    /* Définit la largeur */
+    height: 60px;
+    /* Définit la hauteur */
+    background-color: var(--primary-light);
+    /* Couleur de fond */
+    color: var(--primary-color);
+    /* Couleur du texte */
+    border-radius: 50%;
+    /* Rend l'icône circulaire */
+    display: flex;
+    /* Active Flexbox */
+    align-items: center;
+    /* Centre verticalement le contenu */
+    justify-content: center;
+    /* Centre horizontalement le contenu */
+    margin: 0 auto 1rem;
+    /* Centre l'élément et ajoute un espacement inférieur */
+    font-size: 1.5rem;
+    /* Taille du texte */
+    transition: all var(--transition-fast);
+    /* Animation fluide */
+}
+
+/* Effet au survol : Rotation et changement de couleur */
+.env-feature:hover .env-feature-icon {
+    background-color: var(--primary-color);
+    /* Change la couleur de fond */
+    color: white;
+    /* Change la couleur du texte en blanc */
+    transform: rotateY(180deg);
+    /* Rotation horizontale */
+}
+
+/* ===== Titre de la fonctionnalité environnementale ===== */
+.env-feature h3 {
+    margin-bottom: 0.75rem;
+    /* Espacement en bas */
+    transition: color var(--transition-fast);
+    /* Animation du changement de couleur */
+}
+
+/* Effet au survol : Changement de couleur */
+.env-feature:hover h3 {
+    color: var(--primary-color);
+    /* Applique la couleur principale */
+}
+
+/* ===== Texte descriptif ===== */
+.env-feature p {
+    color: var(--gray-600);
+    /* Couleur grise */
+    margin-bottom: 0;
+    /* Supprime l'espace en bas */
+}
+
+/* ===== Grille des statistiques durables ===== */
+.sustainability-stats {
+    max-width: 800px;
+    /* Limite la largeur */
+    margin: 2rem auto 0;
+    /* Centre la section */
+    display: grid;
+    /* Active la grille */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* Colonnes adaptables */
+    gap: 2rem;
+    /* Espacement entre les éléments */
+}
+
+/* ===== Carte individuelle des statistiques ===== */
+.sustainability-stat {
+    text-align: center;
+    /* Centre le texte */
+    transition: all var(--transition-fast);
+    /* Animation fluide */
+}
+
+/* Effet au survol : élévation */
+.sustainability-stat:hover {
+    transform: translateY(-10px);
+    /* Déplace l'élément vers le haut */
+}
+
+/* ===== Cercle contenant les statistiques ===== */
+.stat-circle {
+    max-width: 150px;
+    /* Taille maximale */
+    margin: 0 auto 1rem;
+    /* Centre le cercle et ajoute un espacement */
+}
+
+/* ===== Style du graphique circulaire ===== */
+.circular-chart {
+    display: block;
+    /* Affichage en bloc */
+    margin: 0 auto;
+    /* Centre le graphique */
+    max-width: 150px;
+    /* Taille maximale */
+}
+
+/* Fond du cercle */
+.circle-bg {
+    fill: none;
+    /* Supprime le remplissage */
+    stroke: var(--gray-200);
+    /* Couleur grise claire */
+    stroke-width: 2.8;
+    /* Épaisseur du trait */
+}
+
+/* Ligne du cercle qui représente la progression */
+.circle {
+    fill: none;
+    /* Supprime le remplissage */
+    stroke-width: 2.8;
+    /* Épaisseur du trait */
+    stroke-linecap: round;
+    /* Bord arrondi du trait */
+    stroke: var(--primary-color);
+    /* Couleur principale */
+    animation: progress 1.5s ease-out forwards;
+    /* Animation fluide */
+}
+
+/* Animation de la progression */
+@keyframes progress {
+    0% {
+        stroke-dasharray: 0 100;
+        /* Commence avec une progression nulle */
+    }
+}
+
+/* Style du texte affichant le pourcentage */
+.percentage {
+    fill: var(--primary-color);
+    /* Applique la couleur principale */
+    font-family: sans-serif;
+    /* Police sans empattement */
+    font-size: 0.5em;
+    /* Taille réduite */
+    text-anchor: middle;
+    /* Centre le texte */
+    font-weight: bold;
+    /* Texte en gras */
+}
+
+/* Style du texte des statistiques */
+.sustainability-stat p {
+    color: var(--gray-700);
+    /* Couleur grise foncée */
+    font-weight: 500;
+    /* Augmente la graisse du texte */
+    margin-bottom: 0;
+    /* Supprime l'espacement inférieur */
+}
+
+/* ===== Styles responsifs pour les nouvelles pages ===== */
+@media (max-width: 768px) {
+    .timeline::before {
+        left: 20px;
+        /* Déplace la ligne de la timeline */
+    }
+
+    .timeline-date {
+        width: 60px;
+        /* Réduit la taille de la date */
+    }
+
+    .timeline-content {
+        margin-left: 70px;
+        /* Ajuste la marge à gauche */
+    }
+
+    .env-card {
+        flex-direction: column;
+        /* Affiche les cartes en colonne */
+    }
+
+    .env-icon {
+        margin-right: 0;
+        /* Supprime l'espacement à droite */
+        margin-bottom: 1.5rem;
+        /* Ajoute un espacement en bas */
+    }
+
+    .env-image-grid {
+        grid-template-columns: 1fr;
+        /* Affiche une seule colonne */
+    }
+}
+/* ===== Responsive design pour les écrans jusqu'à 992px ===== */
+@media (max-width: 992px) {
+
+    /* Ajustement des grilles pour s’adapter aux écrans moyens */
+    .solutions-grid,
+    .info-grid,
+    .figures-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        /* Utilise des colonnes flexibles, qui s’ajustent avec un minimum de 250px */
+    }
+
+    .env-features {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        /* Réduit la taille minimale des colonnes à 150px pour les fonctionnalités environnementales */
+    }
+}
+
+/* ===== Responsive design pour les écrans jusqu'à 576px ===== */
+@media (max-width: 576px) {
+
+    /* Quand l’écran est plus petit, les grilles passent à une seule colonne */
+    .info-grid,
+    .env-features,
+    .figures-grid {
+        grid-template-columns: 1fr;
+        /* Affichage en une seule colonne pour optimiser la lecture */
+    }
+}

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <!-- Définition du charset pour l'encodage des caractères -->
+    <meta charset="UTF-8">
+    <!-- Définition de la mise en page pour les appareils mobiles -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titre de la page affiché dans l'onglet du navigateur -->
+    <title>Environnement de Travail - Digital +</title>
+    <!-- Lien vers la feuille de style externe -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Lien vers la bibliothèque Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Lien vers Google Fonts pour utiliser la police "Inter" -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- En-tête du site -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu">
+        <div class="container">
+            <!-- Formulaire de recherche mobile -->
+            <form action="#" class="mobile-search">
+                <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <!-- Liens du menu mobile -->
+            <ul class="mobile-nav-links">
+                <li><a href="industrie.html"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal de la page -->
+    <main>
+        <!-- Section héro avec une image de fond -->
+        <section class="page-hero environment-hero">
+            <div class="hero-overlay"></div>
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Notre Environnement de Travail</h1>
+                    <p>Découvrez l'écosystème innovant et dynamique de Digital +</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section sur l'écosystème industriel -->
+        <section class="ecosystem-section">
+            <div class="container">
+                <!-- Titre et séparateur de la section -->
+                <div class="section-header animate-on-scroll">
+                    <h2>Notre écosystème industriel</h2>
+                    <div class="section-divider"></div>
+                </div>
+
+                <!-- Grille des éléments de l'écosystème -->
+                <div class="ecosystem-grid">
+                    <!-- Carte des installations modernes -->
+                    <div class="ecosystem-card animate-on-scroll" data-delay="0">
+                        <div class="ecosystem-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="ecosystem-content">
+                            <h3>Installations modernes</h3>
+                            <p>Des espaces de travail conçus pour favoriser l'innovation et la productivité, équipés des
+                                dernières technologies.</p>
+                        </div>
+                    </div>
+
+                    <!-- Carte des usines certifiées Industry 4.0 -->
+                    <div class="ecosystem-card animate-on-scroll" data-delay="200">
+                        <div class="ecosystem-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="ecosystem-content">
+                            <h3>Usines certifiées Industry 4.0</h3>
+                            <p>Nos installations industrielles sont à la pointe de la technologie, intégrant l'IoT, l'IA
+                                et l'automatisation.</p>
+                        </div>
+                    </div>
+
+                    <!-- Carte des laboratoires de R&D -->
+                    <div class="ecosystem-card animate-on-scroll" data-delay="400">
+                        <div class="ecosystem-icon">
+                            <i class="fas fa-flask"></i>
+                        </div>
+                        <div class="ecosystem-content">
+                            <h3>Laboratoires de R&D équipés</h3>
+                            <p>Des espaces dédiés à l'expérimentation et au développement de nouvelles solutions
+                                technologiques.</p>
+                        </div>
+                    </div>
+
+                    <!-- Carte des espaces collaboratifs -->
+                    <div class="ecosystem-card animate-on-scroll" data-delay="600">
+                        <div class="ecosystem-icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <div class="ecosystem-content">
+                            <h3>Espaces collaboratifs ouverts</h3>
+                            <p>Des zones de travail conçues pour faciliter les échanges, la créativité et la
+                                collaboration entre équipes.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galerie d'images -->
+        <section class="workspace-gallery">
+            <div class="container">
+                <div class="gallery-grid">
+                    <!-- Premier élément de la galerie -->
+                    <div class="gallery-overlay">
+                        <h3>Espace collaboratif</h3>
+                    </div>
+                    <div class="gallery-item large animate-on-scroll">
+                        <div class="gallery-image">
+                            <img src="Un espace de coworking en projet .png" alt="Espace de travail collaboratif">
+                        </div>
+                    </div>
+
+                    <!-- Deuxième élément de la galerie -->
+                    <div class="gallery-overlay">
+                        <h3>Laboratoire R&D</h3>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-delay="200">
+                        <div class="gallery-image">
+                            <img src="Laboratoire.jpg" alt="Laboratoire R&D">
+                        </div>
+                    </div>
+
+                    <!-- Troisième élément de la galerie -->
+                    <div class="gallery-overlay">
+                        <h3>Usine Industry 4.0</h3>
+                    </div>
+                    <div class="gallery-item animate-on-scroll" data-delay="400">
+                        <div class="gallery-image">
+                            <img src="Usine.jpg" alt="Usine Industry 4.0">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+     
+<!-- Section développement durable -->
+<section class="sustainability-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Développement durable</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="sustainability-content">
+            <!-- Texte d'introduction -->
+            <div class="sustainability-text animate-on-scroll">
+                <p class="lead-text">
+                    Chez Digital +, nous sommes engagés à réduire notre empreinte environnementale et à promouvoir
+                    des pratiques durables dans toutes nos activités.
+                </p>
+            </div>
+
+            <!-- Carte des indicateurs -->
+            <div class="sustainability-metrics">
+                <!-- Déchets recyclés -->
+                <div class="metric-card animate-on-scroll">
+                    <div class="metric-chart">
+                        <svg viewBox="0 0 36 36" class="circular-chart">
+                            <path class="circle-bg" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <path class="circle" stroke-dasharray="92, 100" d="M18 2.0845
+                                a 15.9155 15.9155 0 0 1 0 31.831
+                                a 15.9155 15.9155 0 0 1 0 -31.831" />
+                            <text x="18" y="20.35" class="percentage">92%</text>
+                        </svg>
+                    </div>
+                    <h3>Déchets recyclés</h3>
+                    <p>Processus circulaires efficaces</p>
+                </div>
+
+                <!-- Audits énergétiques -->
+                <div class="metric-card animate-on-scroll" data-delay="200">
+                    <div class="metric-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Audits énergétiques</h3>
+                    <p>Réalisés trimestriellement pour optimiser notre consommation</p>
+                </div>
+
+                <!-- Partenariats académiques -->
+                <div class="metric-card animate-on-scroll" data-delay="400">
+                    <div class="metric-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h3>Partenariats académiques</h3>
+                    <p>Collaboration avec des écoles d'ingénieurs pour l'innovation durable</p>
+                </div>
+            </div>
+
+            <!-- Initiatives vertes -->
+            <div class="sustainability-initiatives animate-on-scroll" data-delay="600">
+                <h3>Nos initiatives vertes</h3>
+                <div class="initiatives-grid">
+                    <div class="initiative-item">
+                        <div class="initiative-icon">
+                            <i class="fas fa-solar-panel"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <h4>Panneaux solaires</h4>
+                            <p>30% de notre énergie est produite sur site</p>
+                        </div>
+                    </div>
+                    <div class="initiative-item">
+                        <div class="initiative-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <h4>Économie circulaire</h4>
+                            <p>Réutilisation des matériaux dans la chaîne de production</p>
+                        </div>
+                    </div>
+                    <div class="initiative-item">
+                        <div class="initiative-icon">
+                            <i class="fas fa-bicycle"></i>
+                        </div>
+                        <div class="initiative-content">
+                            <h4>Mobilité verte</h4>
+                            <p>Incitations pour les transports écologiques</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section témoignages -->
+<section class="testimonials-section">
+    <div class="container">
+        <div class="section-header animate-on-scroll">
+            <h2>Témoignages</h2>
+            <div class="section-divider"></div>
+        </div>
+
+        <div class="testimonials-slider">
+            <!-- Témoignage 1 -->
+            <div class="testimonial-card animate-on-scroll">
+                <div class="testimonial-content">
+                    <p>"L'environnement de travail chez Digital + est vraiment stimulant. Les espaces
+                        collaboratifs et la culture d'innovation nous permettent de donner le meilleur de
+                        nous-mêmes."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Sophie Martin</h4>
+                        <p>Ingénieure R&D</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Témoignage 2 -->
+            <div class="testimonial-card animate-on-scroll" data-delay="200">
+                <div class="testimonial-content">
+                    <p>"Le programme de mentorat inversé m'a permis d'apporter ma vision des nouvelles
+                        technologies tout en bénéficiant de l'expérience de mes collègues seniors."</p>
+                </div>
+                <div class="testimonial-author">
+                    <div class="author-info">
+                        <h4>Thomas Dubois</h4>
+                        <p>Développeur Full-Stack</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Section CTA (Call to Action) -->
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content animate-on-scroll">
+            <h2>Rejoignez notre équipe</h2>
+            <p>Vous souhaitez évoluer dans un environnement de travail innovant et dynamique ?</p>
+            <div class="cta-buttons">
+                <!-- Bouton pour voir les offres -->
+                <a href="carriere.html" class="btn btn-primary">
+                    Voir nos offres
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <!-- Bouton pour nous contacter -->
+                <a href="contact.html" class="btn btn-outline">
+                    Nous contacter
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Pied de page -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <!-- Section Digital + -->
+            <div class="footer-section">
+                <h3>Digital +</h3>
+                <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.</p>
+                <div class="social-links">
+                    <!-- Liens vers les réseaux sociaux -->
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Liens rapides -->
+            <div class="footer-section">
+                <h3>Liens rapides</h3>
+                <ul class="footer-links">
+                    <!-- Liens de navigation vers d'autres pages du site -->
+                    <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                    <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                    <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                    <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                    <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                    <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                    <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Informations de contact -->
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul class="contact-info">
+                    <!-- Détails de contact de l'entreprise -->
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>123 Avenue de l'Innovation<br>75001 Paris, France</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+212 6 00 00 00 00</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                            <span>Digitalplus@gmail.com</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Formulaire d'inscription à la newsletter -->
+            <div class="footer-section">
+                <h3>Newsletter</h3>
+                <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                <form class="newsletter-form">
+                    <!-- Champ de saisie pour l'email -->
+                    <input type="email" placeholder="Votre email" class="newsletter-input">
+                    <!-- Bouton pour soumettre l'inscription -->
+                    <button type="submit" class="newsletter-button">S'inscrire</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Section inférieure du pied de page -->
+        <div class="footer-bottom">
+            <p>© Digital + 2025. Tous droits réservés.</p>
+            <ul class="footer-bottom-links">
+                <!-- Liens légaux et du site -->
+                <li><a href="#">Mentions légales</a></li>
+                <li><a href="#">Confidentialité</a></li>
+                <li><a href="#">Conditions</a></li>
+                <li><a href="#">Plan du site</a></li>
+            </ul>
+        </div>
+    </div>
+</footer>
+
+<!-- Inclusion du fichier JavaScript -->
+<script src="script.js"></script>
+</body>
+
+</html>

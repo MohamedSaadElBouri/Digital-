@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Actualités - Digital +</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome pour les icônes -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- En-tête -->
+<header class="header">
+    <div class="container">
+        <nav class="nav">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="LOGO.jpg" alt="Logo Digital +" style="max-width: 100%; height: auto; display: block;">
+                </a>
+            </div>
+
+            <!-- Barre de Recherche -->
+            <div class="search-container">
+                <form action="#" class="search-form">
+                    <input type="text" placeholder="Rechercher..." class="search-input">
+                    <button type="submit" class="search-button">
+                        <!-- Icon de recherche -->
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <!-- Pour le mobile la bar de 3 tirés -->
+            <div class="menu-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="industrie.html" class="nav-link"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html" class="nav-link"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html" class="nav-link"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="nav-link"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html" class="nav-link"><i class="fas fa-info-circle"></i>À propos</a></li>
+                <li><a href="contact.html" class="nav-link"><i class="fas fa-envelope"></i> Contact</a></li>
+                <!-- Remplacer la balise du sélecteur de langue dans la navigation -->
+                <li>
+                    <div class="language-toggle">
+                        <span>FR</span> | <span style="font-weight: 400;">EN</span> <i class="fas fa-chevron-down"></i>
+                        <!-- Le choix de langue (anglais ou français) -->
+                        <div class="language-dropdown">
+                            <a href="#" class="active">Français</a>
+                            <a href="#">English</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+    <!-- Menu mobile -->
+    <div class="mobile-menu">
+        <div class="container">
+            <form action="#" class="mobile-search">
+                <input type="text" placeholder="Rechercher..." class="mobile-search-input">
+                <button type="submit" class="mobile-search-button">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <ul class="mobile-nav-links">
+                <li><a href="industrie.html"><i class="fas fa-industry"></i> Industrie</a></li>
+                <li><a href="services.html"><i class="fas fa-cogs"></i> Services</a></li>
+                <li><a href="carriere.html"><i class="fas fa-users"></i> Carrière</a></li>
+                <li><a href="actualites.html" class="active"><i class="fas fa-newspaper"></i> Actualités</a></li>
+                <li><a href="apropos.html"><i class="fas fa-info-circle"></i> À propos</a></li>
+                <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact</a></li>
+                <li><a href="#"><i class="fas fa-globe"></i> Changer de langue</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Contenu principal -->
+    <main>
+        <!-- Bannière hero -->
+        <section class="page-hero">
+            <div class="container">
+                <div class="hero-content animate-fade-in">
+                    <h1>Actualités</h1>
+                    <p>Restez informé des dernières nouvelles et événements de Digital +</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Articles d'actualités -->
+        <section class="news-section">
+            <div class="container">
+                <div class="section-header animate-on-scroll">
+                    <h2>Nos dernières actualités</h2>
+                    <div class="section-divider"></div>
+                </div>
+                <div class="news-grid">
+                    <!-- Article 1 -->
+                    <article class="news-card animate-on-scroll" data-delay="0">
+                        <div class="news-image">
+                            <img src="Lancement d’un nouveau mini-projet étudiant chez Digital +.png" alt="Projet étudiant Digital +">
+                            <div class="news-date">
+                                <span class="day">15</span>
+                                <span class="month">Avril</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Lancement d'un nouveau mini-projet étudiant chez Digital +</h3>
+                            <p>Un groupe de jeunes développeurs finalise une appli mobile pour faciliter le covoiturage
+                                étudiant.</p>
+                            <a href="#" class="btn-text">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 2 -->
+                    <article class="news-card animate-on-scroll" data-delay="200">
+                        <div class="news-image">
+                            <img src="Panneau_Solaire.jpg" alt="Installation panneaux solaires">
+                            <div class="news-date">
+                                <span class="day">10</span>
+                                <span class="month">Juin</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Digital + adopte l'énergie verte dans ses locaux</h3>
+                            <p>Vers une tech plus responsable : Digital + passe à l'énergie solaire pour ses serveurs de
+                                test.</p>
+                            <a href="#" class="btn-text">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 3 -->
+                    <article class="news-card animate-on-scroll" data-delay="400">
+                        <div class="news-image">
+                            <img src="Des sessions de formation express sur le full-stack pour les membres.png" alt="Formation full-stack">
+                            <div class="news-date">
+                                <span class="day">05</span>
+                                <span class="month">Juin</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Des sessions de formation express sur le full-stack pour les membres</h3>
+                            <p>Digital + propose chaque vendredi une Flash Formation sur des sujets comme React, Node.js,
+                                Docker ou Git.</p>
+                            <a href="#" class="btn-text">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 4 -->
+                    <article class="news-card animate-on-scroll" data-delay="0">
+                        <div class="news-image">
+                            <img src="collaboration en route.png" alt="Collaboration avec lycéens">
+                            <div class="news-date">
+                                <span class="day">01</span>
+                                <span class="month">Juin</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Digital + x Lycée Technique : Collaboration en route !</h3>
+                            <p>Des élèves en BTS participeront à un hackathon encadré par l'équipe Digital +.</p>
+                            <a href="#" class="btn-text">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 5 -->
+                    <article class="news-card animate-on-scroll" data-delay="200">
+                        <div class="news-image">
+                            <img src="Un partenariat avec une start-up locale .png" alt="Partenariat GreenTech">
+                            <div class="news-date">
+                                <span class="day">28</span>
+                                <span class="month">Mai</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Un partenariat avec une start-up locale ?</h3>
+                            <p>Bientôt une appli en collaboration avec GreenTech Mobility pour encourager les trajets
+                                propres !</p>
+                            <a href="#" class="btn-text">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+
+                    <!-- Article 6 -->
+                    <article class="news-card animate-on-scroll" data-delay="400">
+                        <div class="news-image">
+                            <img src="Une plateforme de projets partagés en test interne.png" alt="Outil de gestion de projets">
+                            <div class="news-date">
+                                <span class="day">25</span>
+                                <span class="month">Mai</span>
+                            </div>
+                        </div>
+                        <div class="news-content">
+                            <h3>Une plateforme de projets partagés en test interne</h3>
+                            <p>Digital + expérimente un outil en ligne pour faciliter la gestion de projets étudiants à
+                                distance.</p>
+                            <a href="#" class="btn-text">Lire la suite <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="pagination animate-on-scroll">
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link next">
+                        <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Digital +</h3>
+                    <p>Leader dans la réindustrialisation et l'innovation technologique pour l'industrie manufacturière.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html"><i class="fas fa-arrow-right"></i> Accueil</a></li>
+                        <li><a href="industrie.html"><i class="fas fa-arrow-right"></i> Industrie</a></li>
+                        <li><a href="services.html"><i class="fas fa-arrow-right"></i> Services</a></li>
+                        <li><a href="carriere.html"><i class="fas fa-arrow-right"></i> Carrière</a></li>
+                        <li><a href="actualites.html"><i class="fas fa-arrow-right"></i> Actualités</a></li>
+                        <li><a href="apropos.html"><i class="fas fa-arrow-right"></i> À propos</a></li>
+                        <li><a href="contact.html"><i class="fas fa-arrow-right"></i> Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Avenue de l'Innovation<br>75001 Paris, France</span>
+                        </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>+212 6 00 00 00 00</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>Digitalplus@gmail.com</span>
+                    </li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Inscrivez-vous pour recevoir nos dernières actualités et offres.</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Votre email" class="newsletter-input">
+                        <button type="submit" class="newsletter-button">S'inscrire</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© Digital + 2025. Tous droits réservés.</p>
+                <ul class="footer-bottom-links">
+                    <li><a href="#">Mentions légales</a></li>
+                    <li><a href="#">Confidentialité</a></li>
+                    <li><a href="#">Conditions</a></li>
+                    <li><a href="#">Plan du site</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
